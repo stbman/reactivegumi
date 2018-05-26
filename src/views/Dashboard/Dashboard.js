@@ -461,7 +461,10 @@ class Dashboard extends Component {
     this.state = {
       dropdownOpen: false,
       radioSelected: 2,
+      data: this.props.jsonData
     };
+
+    console.log(this.props);
   }
 
   toggle() {
