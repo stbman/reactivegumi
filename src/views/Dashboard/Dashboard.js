@@ -589,15 +589,16 @@ class Dashboard extends Component {
                         <td>
                           <strong>{item.count}</strong>
                           <div>
-                            <small className="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                            <small className="text-muted">{item.first_post.split(" ")[0]} - {item.last_post.split(" ")[0]}</small>
                           </div>
                         </td>
                         <td>
                           <strong>Topics here</strong>
                         </td>
                         <td>
-                          AI Revolution
-                          <div className="small text-muted">Read More</div>
+                          <div>{item.last_post_content}</div>
+                          <div><a href={decodeURIComponent(item.last_post_link)} target="_blank">Read More</a></div>
+                          <div className="small text-muted">{item.last_post}</div>
                         </td>
                       </tr>
                       )
@@ -625,6 +626,7 @@ class Dashboard extends Component {
                   </tr>
                   </thead>
                   <tbody>{this.likes.map(function(item, key) {
+                    let lastpost = "woohoo";
                     return (
                         <tr key = {key}>
                           <td className="text-center">
@@ -646,7 +648,7 @@ class Dashboard extends Component {
                           <strong>Topics here</strong>
                         </td>
                         <td>
-                          AI Revolution
+                          {lastpost}
                           <div className="small text-muted">Read More</div>
                         </td>
                       </tr>
