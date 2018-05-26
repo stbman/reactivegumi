@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { Container } from 'reactstrap';
 
+import jsonData from '../../data/groups_102523307031776_23-05-2018-15-02-44.json';
+
 import {
   AppAside,
   AppBreadcrumb,
@@ -27,16 +29,9 @@ class DefaultLayout extends Component {
     return (
       <div className="app">
         <AppHeader fixed>
-          <DefaultHeader />
+          <DefaultHeader jsonfilePath="groups_102523307031776_23-05-2018-15-02-44.json" />
         </AppHeader>
         <div className="app-body">
-          <AppSidebar fixed display="lg">
-            <AppSidebarHeader />
-            <AppSidebarForm />
-            <AppSidebarNav navConfig={navigation} {...this.props} />
-            <AppSidebarFooter />
-            <AppSidebarMinimizer />
-          </AppSidebar>
           <main className="main">
             <AppBreadcrumb appRoutes={routes}/>
             <Container fluid>
@@ -52,9 +47,9 @@ class DefaultLayout extends Component {
               </Switch>
             </Container>
           </main>
-          <AppAside fixed hidden>
+          {/* <AppAside fixed hidden>
             <DefaultAside />
-          </AppAside>
+          </AppAside> */}
         </div>
         <AppFooter>
           <DefaultFooter />
