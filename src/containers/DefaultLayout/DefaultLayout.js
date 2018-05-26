@@ -4,8 +4,6 @@ import { Container } from 'reactstrap';
 
 import axios from 'axios';
 
-import { jsonData } from '../../data/groups_102523307031776_23-05-2018-15-02-44.json';
-
 import {
   AppAside,
   AppBreadcrumb,
@@ -31,52 +29,72 @@ class DefaultLayout extends Component {
     super();
     this.state = {
       fileName: "",
-      data: []
+      data: [],
+      dataLoaded: false
     }
   }
 
-  componentWillMount() {
-    let url = "data/groups_102523307031776_23-05-2018-15-02-44.json";
-    this.state.fileName = url;
+  setStateAsync(state) {
+    return new Promise((resolve) => {
+      this.setState(state, resolve)
+    });
+  }
 
-    axios.get(url)
-      .then(res => {
-        const jsonData = res.data;
-        this.setState({ data: jsonData });
-      });
+  async componentWillMount() {
+    const url = "data/groups_102523307031776_23-05-2018-15-02-44.json";
+    this.state.fileName = new String(url).replace(".json", "").replace("data/", "");
+
+    const res = await axios.get(url)
+    const jsonData = await res.data;
+    await this.setStateAsync({data: jsonData})
+    await this.setStateAsync({dataLoaded: true})
   }
 
   render() {
-    return (
-      <div className="app">
-        <AppHeader fixed>
-          <DefaultHeader jsonfilePath={ this.state.fileName } />
-        </AppHeader>
-        <div className="app-body">
-          <main className="main">
-            <AppBreadcrumb appRoutes={routes}/>
-            <Container fluid>
-              <Switch>
-                {routes.map((route, idx) => {
-                    return route.component ? (<Route key={idx} path={route.path} exact={route.exact} name={route.name} render={props => (
-                        <route.component {...props} data={ this.state.data }/>
-                      )} />)
-                      : (null);
-                  },
-                )}
-                <Redirect from="/" to="/dashboard" />
-              </Switch>
-            </Container>
-          </main>
-          {/* <AppAside fixed hidden>
-            <DefaultAside />
-          </AppAside> */}
+    if (this.state.dataLoaded === true) {
+      return (
+        <div className="app">
+          <AppHeader fixed>
+            <DefaultHeader jsonfilePath={ this.state.fileName } />
+          </AppHeader>
+          <div className="app-body">
+            <main className="main">
+              <AppBreadcrumb appRoutes={routes}/>
+              <Container fluid>
+                <Switch>
+                  {routes.map((route, idx) => {
+                      return route.component ? (<Route key={idx} path={route.path} exact={route.exact} name={route.name} render={props => (
+                          <route.component {...props} data={this.state.data}/>
+                        )} />)
+                        : (null);
+                    },
+                  )}
+                  <Redirect from="/" to="/dashboard" />
+                </Switch>
+              </Container>
+            </main>
+          </div>
+          <AppFooter>
+            <DefaultFooter />
+          </AppFooter>
         </div>
-        <AppFooter>
-          <DefaultFooter />
-        </AppFooter>
-      </div>
-    );
+      );
+    }
+    else {
+      return (
+        <div className="app">
+          <AppHeader fixed>
+            <DefaultHeader jsonfilePath={ this.state.fileName } />
+          </AppHeader>
+          <div className="app-body">
+            Loading...
+          </div>
+          <AppFooter>
+            <DefaultFooter />
+          </AppFooter>
+        </div>
+      );
+    }
   }
 }
 
