@@ -512,7 +512,7 @@ class Dashboard extends Component {
         <Row>
           <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-info">
-              <CardBody className="pb-0">
+              <CardBody className="pb-4">
                 <div className="text-value">{ this.totalPosts }</div>
                 <div>Posts</div>
               </CardBody>
@@ -524,7 +524,7 @@ class Dashboard extends Component {
 
           <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-primary">
-              <CardBody className="pb-0">
+              <CardBody className="pb-4">
                 <div className="text-value">{ this.uniquePeople.length }</div>
                 <div>Active Members</div>
               </CardBody>
@@ -536,7 +536,7 @@ class Dashboard extends Component {
 
           <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-warning">
-              <CardBody className="pb-0">
+              <CardBody className="pb-4">
                 <div className="text-value">{ this.totalReadership }</div>
                 <div>Readership</div>
               </CardBody>
@@ -548,7 +548,7 @@ class Dashboard extends Component {
 
           <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-danger">
-              <CardBody className="pb-0">
+              <CardBody className="pb-4">
                 <div className="text-value">{ this.totalLikes }</div>
                 <div>Likes</div>
               </CardBody>
@@ -559,158 +559,188 @@ class Dashboard extends Component {
           </Col>
         </Row>
 
-      <Row>
-        <Col>
-          <Card>
-            <CardBody className="pb-0">
-              <h6>Top Posters</h6>
-              <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
-                  <thead className="thead-light">
-                  <tr>
-                    <th className="text-center"><i className="icon-people"></i></th>
-                    <th>User</th>
-                    <th>Posts</th>
-                    <th>Topics</th>
-                    <th className="content-cell">Last Post</th>
-                  </tr>
-                  </thead>
-                  <tbody>{this.uniquePeople.map(function(item, key) {
-                    return (
-                        <tr key = {key}>
-                          <td className="text-center">
-                            <div className="avatar">
-                              <img src={'assets/img/avatars/4.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
-                              <span className="avatar-status badge-success"></span>
-                            </div>
-                          </td>
-                          <td>
-                          <div>{item.name}</div>
-                        </td>
-                        <td>
-                          <strong>{item.count}</strong>
-                          <div>
-                            <small className="text-muted">{item.first_post.split(" ")[0]} - {item.last_post.split(" ")[0]}</small>
-                          </div>
-                        </td>
-                        <td>
-                          <strong>Topics here</strong>
-                        </td>
-                        <td>
-                          <div>{item.last_post_content}</div>
-                          <div><a href={decodeURIComponent(item.last_post_link)} target="_blank">Read More</a></div>
-                          <div className="small text-muted">{item.last_post}</div>
-                        </td>
-                      </tr>
-                      )
-                  })}
+        <Row>
+          <Col>
+            <Card>
+              <CardBody className="pb-4">
+                <h6>Content Analysis</h6>
+                  <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                  <tbody>
+                    <tr>
+                      <td><strong>Filename </strong></td>
+                      <td>{ this.state.data['data_details']['filename']}</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Data Generated On </strong></td>
+                      <td>{ this.state.data['data_details']['time_data_generated']}</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Earliest Post </strong></td>
+                      <td>{ this.state.data['data_details']['earliest_post']}</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Latest Post </strong></td>
+                      <td>{ this.state.data['data_details']['latest_post']}</td>
+                    </tr>
                   </tbody>
-                </Table>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
+                  </Table>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
 
-      <Row>
-        <Col>
-          <Card>
-            <CardBody className="pb-0">
-              <h6>Popular Posters</h6>
-              <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
-                  <thead className="thead-light">
-                  <tr>
-                    <th className="text-center"><i className="icon-people"></i></th>
-                    <th>User</th>
-                    <th>Total Likes</th>
-                    <th>Topics</th>
-                    <th className="content-cell">Most Liked Post</th>
-                  </tr>
-                  </thead>
-                  <tbody>{this.likes.map(function(item, key) {
-                    return (
-                        <tr key = {key}>
-                          <td className="text-center">
-                            <div className="avatar">
-                              <img src={'assets/img/avatars/4.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
-                              <span className="avatar-status badge-success"></span>
+        <Row>
+          <Col>
+            <Card>
+              <CardBody className="pb-4">
+                <h6>Top Posters</h6>
+                <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                    <thead className="thead-light">
+                    <tr>
+                      <th className="text-center"><i className="icon-people"></i></th>
+                      <th>User</th>
+                      <th>Posts</th>
+                      <th>Topics</th>
+                      <th className="content-cell">Last Post</th>
+                    </tr>
+                    </thead>
+                    <tbody>{this.uniquePeople.map(function(item, key) {
+                      return (
+                          <tr key = {key}>
+                            <td className="text-center">
+                              <div className="avatar">
+                                <img src={'assets/img/avatars/4.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
+                                <span className="avatar-status badge-success"></span>
+                              </div>
+                            </td>
+                            <td>
+                            <div>{item.name}</div>
+                          </td>
+                          <td>
+                            <strong>{item.count}</strong>
+                            <div>
+                              <small className="text-muted">{item.first_post.split(" ")[0]} - {item.last_post.split(" ")[0]}</small>
                             </div>
                           </td>
                           <td>
-                          <div>{item.name}</div>
-                        </td>
-                        <td>
-                          <strong>{item.sum}</strong>
-                          <div>
-                            <small className="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                          </div>
-                        </td>
-                        <td>
-                          <strong>Topics here</strong>
-                        </td>
-                        <td>
-                          <div>{item.content}</div>
-                          <div><a href={decodeURIComponent(item.link)} target="_blank">Read More</a></div>
-                          <div className="small text-muted">{item.likes_max} Likes, Posted on {item.post_time}</div>
-                        </td>
-                      </tr>
-                      )
-                  })}
-                  </tbody>
-                </Table>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>      
+                            <strong>Topics here</strong>
+                          </td>
+                          <td>
+                            <div>{item.last_post_content}</div>
+                            <div><a href={decodeURIComponent(item.last_post_link)} target="_blank">Read More</a></div>
+                            <div className="small text-muted">{item.last_post}</div>
+                          </td>
+                        </tr>
+                        )
+                    })}
+                    </tbody>
+                  </Table>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
 
-      <Row>
-        <Col>
-          <Card>
-            <CardBody className="pb-0">
-              <h6>Top Readership</h6>
-              <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
-                  <thead className="thead-light">
-                  <tr>
-                    <th className="text-center"><i className="icon-people"></i></th>
-                    <th>User</th>
-                    <th>Number of Reads</th>
-                    <th>Topics</th>
-                    <th className="content-cell">Most Read Post</th>
-                  </tr>
-                  </thead>
-                  <tbody>{this.seenBy.map(function(item, key) {
-                    return (
-                        <tr key = {key}>
-                          <td className="text-center">
-                            <div className="avatar">
-                              <img src={'assets/img/avatars/4.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
-                              <span className="avatar-status badge-success"></span>
+        <Row>
+          <Col>
+            <Card>
+              <CardBody className="pb-4">
+                <h6>Popular Posters</h6>
+                <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                    <thead className="thead-light">
+                    <tr>
+                      <th className="text-center"><i className="icon-people"></i></th>
+                      <th>User</th>
+                      <th>Total Likes</th>
+                      <th>Topics</th>
+                      <th className="content-cell">Most Liked Post</th>
+                    </tr>
+                    </thead>
+                    <tbody>{this.likes.map(function(item, key) {
+                      return (
+                          <tr key = {key}>
+                            <td className="text-center">
+                              <div className="avatar">
+                                <img src={'assets/img/avatars/4.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
+                                <span className="avatar-status badge-success"></span>
+                              </div>
+                            </td>
+                            <td>
+                            <div>{item.name}</div>
+                          </td>
+                          <td>
+                            <strong>{item.sum}</strong>
+                            <div>
+                              <small className="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
                             </div>
                           </td>
                           <td>
-                          <div>{item.name}</div>
-                        </td>
-                        <td>
-                          <strong>{item.sum}</strong>
-                          <div>
-                            <small className="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                          </div>
-                        </td>
-                        <td>
-                          <strong>Topics here</strong>
-                        </td>
-                        <td>
-                          <div>{item.content}</div>
-                          <div><a href={decodeURIComponent(item.link)} target="_blank">Read More</a></div>
-                          <div className="small text-muted">Seen By {item.seen_by_max} people, Posted on {item.post_time}</div>
-                        </td>
-                      </tr>
-                      )
-                  })}
-                  </tbody>
-                </Table>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
+                            <strong>Topics here</strong>
+                          </td>
+                          <td>
+                            <div>{item.content}</div>
+                            <div><a href={decodeURIComponent(item.link)} target="_blank">Read More</a></div>
+                            <div className="small text-muted">{item.likes_max} Likes, Posted on {item.post_time}</div>
+                          </td>
+                        </tr>
+                        )
+                    })}
+                    </tbody>
+                  </Table>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>      
+
+        <Row>
+          <Col>
+            <Card>
+              <CardBody className="pb-4">
+                <h6>Top Readership</h6>
+                <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                    <thead className="thead-light">
+                    <tr>
+                      <th className="text-center"><i className="icon-people"></i></th>
+                      <th>User</th>
+                      <th>Number of Reads</th>
+                      <th>Topics</th>
+                      <th className="content-cell">Most Read Post</th>
+                    </tr>
+                    </thead>
+                    <tbody>{this.seenBy.map(function(item, key) {
+                      return (
+                          <tr key = {key}>
+                            <td className="text-center">
+                              <div className="avatar">
+                                <img src={'assets/img/avatars/4.jpg'} className="img-avatar" alt="admin@bootstrapmaster.com" />
+                                <span className="avatar-status badge-success"></span>
+                              </div>
+                            </td>
+                            <td>
+                            <div>{item.name}</div>
+                          </td>
+                          <td>
+                            <strong>{item.sum}</strong>
+                            <div>
+                              <small className="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                            </div>
+                          </td>
+                          <td>
+                            <strong>Topics here</strong>
+                          </td>
+                          <td>
+                            <div>{item.content}</div>
+                            <div><a href={decodeURIComponent(item.link)} target="_blank">Read More</a></div>
+                            <div className="small text-muted">Seen By {item.seen_by_max} people, Posted on {item.post_time}</div>
+                          </td>
+                        </tr>
+                        )
+                    })}
+                    </tbody>
+                  </Table>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
 
       {/* <Row>
         <Col>

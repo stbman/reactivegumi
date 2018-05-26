@@ -23,8 +23,16 @@ class DefaultHeader extends Component {
     this.dateDisplay = day + " " + month + " " + year;
 
     this.state = {
-      fileName: this.props.jsonfilePath,
+      data: this.props.data
     };
+
+    if (this.state.data != undefined) {
+      this.getDataDetails();
+    }
+  }
+
+  getDataDetails() {
+    //this.state.fileName = this.state.data['filename'];
   }
 
   render() {
@@ -41,15 +49,14 @@ class DefaultHeader extends Component {
         />
         <Nav className="ml-auto" navbar>
 
-          <NavItem className="d-md-down-none">
-            <button className="btn btn-info btn-block" id="import-file-btn">{ this.state.fileName }</button>
+          <NavItem className="d-md-down-none" id="date">
+            <strong>Today's Date: </strong>{this.dateDisplay}
           </NavItem>
 
           <NavItem className="d-md-down-none">
-            Date: {this.dateDisplay}
+            <button className="btn btn-outline-info btn-block" id="import-file-btn">Import File Button</button>
           </NavItem>
         </Nav>
-        {/* <AppAsideToggler className="d-md-down-none" /> */}
       </React.Fragment>
     );
   }

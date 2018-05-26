@@ -30,7 +30,7 @@ class DefaultLayout extends Component {
     this.state = {
       fileName: "",
       data: [],
-      dataLoaded: false
+      dataLoaded: false,
     }
   }
 
@@ -44,10 +44,11 @@ class DefaultLayout extends Component {
     const url = "data/groups_102523307031776_23-05-2018-15-02-44.json";
     this.state.fileName = new String(url).replace(".json", "").replace("data/", "");
 
-    const res = await axios.get(url)
+    const res = await axios.get(url);
     const jsonData = await res.data;
-    await this.setStateAsync({data: jsonData})
-    await this.setStateAsync({dataLoaded: true})
+
+    await this.setStateAsync({data: jsonData});
+    await this.setStateAsync({dataLoaded: true});
   }
 
   render() {
@@ -55,7 +56,7 @@ class DefaultLayout extends Component {
       return (
         <div className="app">
           <AppHeader fixed>
-            <DefaultHeader jsonfilePath={ this.state.fileName } />
+            <DefaultHeader data={ this.state.data['data_details'] } />
           </AppHeader>
           <div className="app-body">
             <main className="main">
@@ -84,7 +85,7 @@ class DefaultLayout extends Component {
       return (
         <div className="app">
           <AppHeader fixed>
-            <DefaultHeader jsonfilePath={ this.state.fileName } />
+            {/* <DefaultHeader/> */}
           </AppHeader>
           <div className="app-body">
             Loading...

@@ -24,5 +24,9 @@ yarn-error.log*
 
 # data
 public/data/
+data_processing/fbot
+data_processing/processed
+data_processing/*.tsv
 
+# vscode settings
 .vscode/
