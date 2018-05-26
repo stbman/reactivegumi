@@ -9939,5 +9939,8 @@ body {
 .app-header .navbar-nav .dropdown-menu-right {
   right: auto; }
 
+th.content-cell {
+  width: 40%; }
+
 html body .app.flex-row.align-items-center {
   height: 100vh; }

@@ -571,7 +571,7 @@ class Dashboard extends Component {
                     <th>User</th>
                     <th>Posts</th>
                     <th>Topics</th>
-                    <th>Last Post</th>
+                    <th className="content-cell">Last Post</th>
                   </tr>
                   </thead>
                   <tbody>{this.uniquePeople.map(function(item, key) {
@@ -620,13 +620,12 @@ class Dashboard extends Component {
                   <tr>
                     <th className="text-center"><i className="icon-people"></i></th>
                     <th>User</th>
-                    <th>Likes on Posts</th>
+                    <th>Total Likes</th>
                     <th>Topics</th>
-                    <th>Last Post</th>
+                    <th className="content-cell">Most Liked Post</th>
                   </tr>
                   </thead>
                   <tbody>{this.likes.map(function(item, key) {
-                    let lastpost = "woohoo";
                     return (
                         <tr key = {key}>
                           <td className="text-center">
@@ -648,8 +647,9 @@ class Dashboard extends Component {
                           <strong>Topics here</strong>
                         </td>
                         <td>
-                          {lastpost}
-                          <div className="small text-muted">Read More</div>
+                          <div>{item.content}</div>
+                          <div><a href={decodeURIComponent(item.link)} target="_blank">Read More</a></div>
+                          <div className="small text-muted">{item.likes_max} Likes, Posted on {item.post_time}</div>
                         </td>
                       </tr>
                       )
@@ -673,7 +673,7 @@ class Dashboard extends Component {
                     <th>User</th>
                     <th>Number of Reads</th>
                     <th>Topics</th>
-                    <th>Last Post</th>
+                    <th className="content-cell">Most Read Post</th>
                   </tr>
                   </thead>
                   <tbody>{this.seenBy.map(function(item, key) {
@@ -698,8 +698,9 @@ class Dashboard extends Component {
                           <strong>Topics here</strong>
                         </td>
                         <td>
-                          AI Revolution
-                          <div className="small text-muted">Read More</div>
+                          <div>{item.content}</div>
+                          <div><a href={decodeURIComponent(item.link)} target="_blank">Read More</a></div>
+                          <div className="small text-muted">Seen By {item.seen_by_max} people, Posted on {item.post_time}</div>
                         </td>
                       </tr>
                       )
