@@ -68,10 +68,16 @@ class Widget02 extends Component {
             <Col sm="3">
               <img src={pic} alt={mainText} className="user-image"/>
             </Col>
-            <Col sm="5">
+            <Col sm="8">
               <div className={lead.classes}>{header}</div>
               <div className="text-muted text-uppercase font-weight-bold font-xs">{mainText}</div>
-            
+
+              <hr size="3"></hr>
+              <div>
+                <strong>Proficiency: </strong>
+                  Web Development (PL3), Web Scraping (PL2)
+              </div>
+
               <hr size="3"></hr>
               <div><strong>First Posted On: </strong>{firstPost}</div>
               <div><strong>Latest Post:</strong>

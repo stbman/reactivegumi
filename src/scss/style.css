@@ -9958,5 +9958,8 @@ th.topics-cell {
   width: 150px;
   height: 150px; }
 
+.profile-card {
+  height: 320px; }
+
 html body .app.flex-row.align-items-center {
   height: 100vh; }
