@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardBody, CardFooter } from 'reactstrap';
+import { Card, CardBody, CardFooter, Row, Col } from 'reactstrap';
 import classNames from 'classnames';
 import { mapToCssModules } from 'reactstrap/lib/utils';
 
@@ -20,15 +20,18 @@ const propTypes = {
 const defaultProps = {
   header: '$1,999.50',
   mainText: 'Income',
+  pic: '../../src/assets/image/brand/logo.png',
   icon: 'fa fa-cogs',
   color: 'primary',
   variant: '0',
   link: '#',
+  firstPost: '',
+  lastPost: {}
 };
 
 class Widget02 extends Component {
   render() {
-    const { className, cssModule, header, mainText, icon, color, footer, link, children, variant, ...attributes } = this.props;
+    const { className, cssModule, header, mainText, pic, icon, firstPost, lastPost, color, footer, link, children, variant, ...attributes } = this.props;
 
     // demo purposes only
     const padding = (variant === '0' ? { card: 'p-3', icon: 'p-3', lead: 'mt-2' } : (variant === '1' ? {
@@ -60,9 +63,24 @@ class Widget02 extends Component {
     return (
       <Card>
         <CardBody className={card.classes} {...attributes}>
-          {blockIcon(card.icon)}
-          <div className={lead.classes}>{header}</div>
-          <div className="text-muted text-uppercase font-weight-bold font-xs">{mainText}</div>
+          {/* {blockIcon(card.icon)} */}
+          <Row>
+            <Col sm="3">
+              <img src={pic} alt={mainText} className="user-image"/>
+            </Col>
+            <Col sm="5">
+              <div className={lead.classes}>{header}</div>
+              <div className="text-muted text-uppercase font-weight-bold font-xs">{mainText}</div>
+            
+              <hr size="3"></hr>
+              <div><strong>First Posted On: </strong>{firstPost}</div>
+              <div><strong>Latest Post:</strong>
+                <div>{lastPost.content}</div>
+                <div><a href={decodeURIComponent(lastPost.link)} target="_blank">Read More...</a></div>
+                <div><span className="text-muted">{lastPost.date}</span></div>
+              </div>
+            </Col>
+          </Row>
         </CardBody>
         {cardFooter()}
       </Card>

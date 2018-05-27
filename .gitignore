@@ -31,3 +31,5 @@ data_processing/*.tsv
 
 # vscode settings
 .vscode/
+
+src/assets/img/profile
