@@ -7,12 +7,10 @@ import numpy as np
 
 #filename = 'groups_102523307031776_23-05-2018-15-02-44.tsv'
 
-#TODO: Textbox config in config file 
-textbox_config = "http://localhost:8080/textbox/check"
-
 def process_parsed_data(filename):
     #outfilename = 'processed/' + filename.split('/')[1].replace('.tsv', '.json')
-    outfilename = 'processed/' + filename.replace('.tsv', '.json')
+    jsonFilename = filename.replace('.tsv', '.json')
+    outfilename = 'processed/' + jsonFilename
 
     processed_data = {}
 
@@ -21,6 +19,7 @@ def process_parsed_data(filename):
     df['Timestamp'] = pandas.to_datetime(df['Timestamp'])
     df['User Content'] = df['User Content'].replace(np.nan, '')
     df['Link Content'] = df['Link Content'].replace(np.nan, '')
+    df['keywords'] = df['keywords'].replace(np.nan, '')
 
     # Get file details
     time_data_generated = filename.replace('.tsv', '').split('_')[-1]
@@ -34,6 +33,19 @@ def process_parsed_data(filename):
     data_details['filename'] = filename
 
     processed_data['data_details'] = data_details
+
+    # Process entities
+    keyword_dict = {}
+    keyword_list = list(df['keywords'].values)
+    for keyword_group in keyword_list:
+        keyword_group_array = keyword_group.split(',')
+        for keyword in keyword_group_array:
+            if keyword in keyword_dict:
+                keyword_dict[keyword] = keyword_dict[keyword] + 1
+            else:
+                keyword_dict[keyword] = 1
+
+    keyword_sorted = sorted(keyword_dict, key=keyword_dict.get, reverse=True)
 
     # Find unique people who posted
     unique_people = []
@@ -131,31 +143,10 @@ def process_parsed_data(filename):
     readership_sorted = sorted(readership, key=lambda k: k['readership'], reverse=True)
     processed_data['readership'] = readership_sorted
 
-    # Do some entity extraction
-    entities_processed = []
-    '''
-    for index, row in df.iterrows():
-        content = str(row['User Content']) + " " + str(row['Link Content'])
-        r = requests.post(textbox_config, data={'text':content})
-        keywords_json = r.json()['keywords']
-        keyword_array = [x['keyword'].encode('utf-8') for x in keywords_json]
-        keyword_string = ",".join(map(str, keyword_array))
-        df.loc[index, 'keywords'] = keyword_string
-
-        entity_object = {}
-        entity_object['keywords'] = keyword_string
-        entity_object['profile_name'] = row['Profile Name']
-        entity_object['content'] = content
-        entity_object['timestamp'] = str(row['Timestamp'])
-        entity_object['link'] = row['Post Link']
-
-        entities_processed.append(entity_object)
-
-    processed_data['entities'] = entities_processed
-    '''
-
     with open(outfilename, 'w') as outfile:
         data = json.dumps(processed_data)
         outfile.write(data)
+
+    df.to_csv(filename, sep='\t')
 
     print "Data processed. Output written to: " + outfilename
