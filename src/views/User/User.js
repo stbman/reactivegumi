@@ -94,7 +94,7 @@ class User extends Component {
               <Card>
                 <CardBody>
                   <div className="h1 text-muted text-right mb-2">
-                  <i className="icon-people"></i>
+                  <i className="icon-speech"></i>
                   </div>
                   <div className="h4 mb-0" style={{color:"#63c2de"}}>10</div>
                   <small className="text-muted text-uppercase font-weight-bold">Posts</small>
@@ -106,7 +106,7 @@ class User extends Component {
               <Card>
                 <CardBody>
                   <div className="h1 text-muted text-right mb-2">
-                  <i className="icon-people"></i>
+                  <i className="icon-calendar"></i>
                   </div>
                   <div className="h4 mb-0" style={{color:"#20a8d8"}}>4</div>
                   <small className="text-muted text-uppercase font-weight-bold">Posts This Month</small>
@@ -120,7 +120,7 @@ class User extends Component {
               <Card>
                 <CardBody>
                   <div className="h1 text-muted text-right mb-2">
-                  <i className="icon-people"></i>
+                  <i className="icon-user-follow"></i>
                   </div>
                   <div className="h4 mb-0" style={{color:"#ffc107"}}>10</div>
                   <small className="text-muted text-uppercase font-weight-bold">Friends Like Her Posts</small>
