@@ -34,7 +34,9 @@ def process_parsed_data(filename):
 
     processed_data['data_details'] = data_details
 
-    # Process entities
+    # Get entities
+    processed_entities = []
+
     keyword_dict = {}
     keyword_list = list(df['keywords'].values)
     for keyword_group in keyword_list:
@@ -45,7 +47,48 @@ def process_parsed_data(filename):
             else:
                 keyword_dict[keyword] = 1
 
-    keyword_sorted = sorted(keyword_dict, key=keyword_dict.get, reverse=True)
+    keyword_sorted = sorted(keyword_dict.items(), key=lambda x: x[1], reverse=True)
+
+    # Get top n
+    n = 5
+    for i in xrange(0, n):
+        keyword = keyword_sorted[i][0]
+        count = keyword_sorted[i][1]
+
+        df_keyword = df[df['keywords'].str.contains(keyword)]
+        unique_people = df_keyword['Profile Name'].value_counts()
+
+        unique_people_string = ""
+        for idx in unique_people.index:
+            unique_people_string += idx + " (" + str(unique_people[idx]) + " posts), "
+
+        entity_object = {}
+        entity_object['keyword'] = keyword
+        entity_object['unique_string'] = unique_people_string
+        processed_entities.append(entity_object)
+    
+    processed_data['top_entities'] = processed_entities
+
+    # Get people's top entities
+    df_profile_entities_dict = {}
+    top_n_entities = 5
+    df_profile_groups = df.groupby('Profile Name')['keywords'].agg(lambda keywords: ''.join(keywords))
+    for idx in df_profile_groups.index:
+        profile_name = idx
+        profile_keywords = df_profile_groups[idx]
+
+        profile_keywords_dict = {}
+        profile_keywords_array = profile_keywords.split(',')
+
+        for keyword in profile_keywords_array:
+            if keyword in profile_keywords_dict:
+                profile_keywords_dict[keyword] = profile_keywords_dict[keyword] + 1
+            else:
+                profile_keywords_dict[keyword] = 1
+
+        profile_keywords_sorted = sorted(profile_keywords_dict.items(), key=lambda x: x[1], reverse=True)
+
+        df_profile_entities_dict[profile_name] = profile_keywords_sorted
 
     # Find unique people who posted
     unique_people = []
@@ -64,6 +107,11 @@ def process_parsed_data(filename):
         last_post_row = df.loc[(df['Profile Name'] == idx) & (df['Timestamp'] == person['last_post'])]
         person['last_post_link'] = last_post_row['Link Posted'].values[0]
         person['last_post_content'] = last_post_row['Link Content'].values[0]
+
+        # Get entities 
+        entities_dict = df_profile_entities_dict[idx]
+        top_n_entities_list = [x[0] for x in entities_dict[:top_n_entities]]
+        person['entities'] = ', '.join(top_n_entities_list)
 
         unique_people.append(person)
 
@@ -90,6 +138,11 @@ def process_parsed_data(filename):
         person['mean'] = int(person_global_seenby['mean'])
         person['sum'] = int(person_global_seenby['sum'])
 
+        # Get entities 
+        entities_dict = df_profile_entities_dict[person['name']]
+        top_n_entities_list = [x[0] for x in entities_dict[:top_n_entities]]
+        person['entities'] = ', '.join(top_n_entities_list)
+
         seen_by.append(person)
 
     seen_by_sorted = sorted(seen_by, key=lambda k: k['mean'], reverse=True)
@@ -113,6 +166,11 @@ def process_parsed_data(filename):
         person_global_likes = df_likes_counts[df_likes_counts['Profile Name']==person['name']]['Likes Count']
         person['mean'] = int(person_global_likes['mean'])
         person['sum'] = int(person_global_likes['sum'])
+
+        # Get entities 
+        entities_dict = df_profile_entities_dict[person['name']]
+        top_n_entities_list = [x[0] for x in entities_dict[:top_n_entities]]
+        person['entities'] = ', '.join(top_n_entities_list)
 
         likes.append(person)
 
@@ -150,3 +208,6 @@ def process_parsed_data(filename):
     df.to_csv(filename, sep='\t')
 
     print "Data processed. Output written to: " + outfilename
+
+filename = 'groups_102523307031776_23-05-2018-15-02-44.tsv'
+process_parsed_data(filename)

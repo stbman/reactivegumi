@@ -600,7 +600,7 @@ class Dashboard extends Component {
                       <th className="text-center"><i className="icon-people"></i></th>
                       <th>User</th>
                       <th>Posts</th>
-                      <th>Topics</th>
+                      <th className="topics-cell">Topics Posted</th>
                       <th className="content-cell">Last Post</th>
                     </tr>
                     </thead>
@@ -623,7 +623,7 @@ class Dashboard extends Component {
                             </div>
                           </td>
                           <td>
-                            <strong>Topics here</strong>
+                            {item.entities}
                           </td>
                           <td>
                             <div>{item.last_post_content}</div>
@@ -651,7 +651,7 @@ class Dashboard extends Component {
                       <th className="text-center"><i className="icon-people"></i></th>
                       <th>User</th>
                       <th>Total Likes</th>
-                      <th>Topics</th>
+                      <th className="topics-cell">Topics</th>
                       <th className="content-cell">Most Liked Post</th>
                     </tr>
                     </thead>
@@ -674,7 +674,7 @@ class Dashboard extends Component {
                             </div>
                           </td>
                           <td>
-                            <strong>Topics here</strong>
+                            {item.entities}
                           </td>
                           <td>
                             <div>{item.content}</div>
@@ -702,7 +702,7 @@ class Dashboard extends Component {
                       <th className="text-center"><i className="icon-people"></i></th>
                       <th>User</th>
                       <th>Number of Reads</th>
-                      <th>Topics</th>
+                      <th className="topics-cell">Topics</th>
                       <th className="content-cell">Most Read Post</th>
                     </tr>
                     </thead>
@@ -725,7 +725,7 @@ class Dashboard extends Component {
                             </div>
                           </td>
                           <td>
-                            <strong>Topics here</strong>
+                            {item.entities}
                           </td>
                           <td>
                             <div>{item.content}</div>

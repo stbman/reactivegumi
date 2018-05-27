@@ -42,7 +42,7 @@ for i in xrange(0, n):
 
 ### People Centric 
 
-# Get groups of people 
+# Get people's entities
 df_profile_groups = df.groupby('Profile Name')['keywords'].agg(lambda keywords: ''.join(keywords))
 for idx in df_profile_groups.index:
     profile_name = idx
