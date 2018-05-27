@@ -59,12 +59,19 @@ def process_parsed_data(filename):
         unique_people = df_keyword['Profile Name'].value_counts()
 
         unique_people_string = ""
+        unique_people_string_2 = ""
+        post_count = 0
         for idx in unique_people.index:
-            unique_people_string += idx + " (" + str(unique_people[idx]) + " posts), "
+            person_post_count = unique_people[idx]
+            post_count = post_count + int(person_post_count)
+            unique_people_string += idx + " (" + str(person_post_count) + " posts), "
+            unique_people_string_2 += idx + ", "
 
         entity_object = {}
         entity_object['keyword'] = keyword
-        entity_object['unique_string'] = unique_people_string
+        entity_object['unique_string'] = unique_people_string[:-1]
+        entity_object['unique_string_2'] = unique_people_string_2[:-1]
+        entity_object['total_posts'] = post_count
         processed_entities.append(entity_object)
     
     processed_data['top_entities'] = processed_entities

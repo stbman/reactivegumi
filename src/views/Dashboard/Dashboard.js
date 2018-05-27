@@ -21,6 +21,7 @@ import {
   Table,
 } from 'reactstrap';
 import Widget03 from '../../views/Widgets/Widget03'
+import Widget01 from '../../views/Widgets/Widget01'
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
 import { read } from 'fs';
@@ -507,6 +508,8 @@ class Dashboard extends Component {
   }
 
   render() {
+    this.entitiesData = this.state.data['top_entities']
+
     return (
       <div className="animated fadeIn">
         <Row>
@@ -557,6 +560,28 @@ class Dashboard extends Component {
               </div>
             </Card>
           </Col>
+        </Row>
+
+        <Row>
+          <Col xs="6" sm="6" lg="3">
+            <Widget01 header={ this.entitiesData[0]["keyword"] } mainText={ this.entitiesData[0]["total_posts"].toString() } smallText={ this.entitiesData[0]["unique_string_2"].slice(0, -1) } className="bg-facebook" variant="inverse">
+            </Widget01>
+          </Col>
+
+          <Col xs="6" sm="6" lg="3">
+            <Widget01 header={ this.entitiesData[1]["keyword"] } mainText={ this.entitiesData[1]["total_posts"].toString() } smallText={ this.entitiesData[1]["unique_string_2"].slice(0, -1) } className="bg-twitter" variant="inverse">
+            </Widget01>
+          </Col>
+
+          <Col xs="6" sm="6" lg="3">
+            <Widget01 header={ this.entitiesData[2]["keyword"] } mainText={ this.entitiesData[2]["total_posts"].toString() } smallText={ this.entitiesData[2]["unique_string_2"].slice(0, -1) } className="bg-linkedin" variant="inverse">
+            </Widget01>
+          </Col>
+
+          <Col xs="6" sm="6" lg="3">
+            <Widget01 header={ this.entitiesData[3]["keyword"] } mainText={ this.entitiesData[3]["total_posts"].toString() } smallText={ this.entitiesData[3]["unique_string_2"].slice(0, -1) } className="bg-google-plus" variant="inverse">
+            </Widget01>
+          </Col>                    
         </Row>
 
         <Row>
@@ -796,79 +821,6 @@ class Dashboard extends Component {
               </Row>
             </CardFooter>
           </Card>
-        </Col>
-      </Row>
-
-      <Row>
-        <Col xs="6" sm="6" lg="3">
-          <Widget03 dataBox={() => ({ variant: 'facebook', friends: '89k', feeds: '459' })} >
-            <div className="chart-wrapper">
-              <Line data={makeSocialBoxData(0)} options={socialChartOpts} height={90} />
-            </div>
-          </Widget03>
-        </Col>
-
-        <Col xs="6" sm="6" lg="3">
-          <div className="brand-card">
-            <div className="brand-card-header bg-twitter">
-              <i className="fa fa-twitter"></i>
-              <div className="chart-wrapper">
-                <Line data={makeSocialBoxData(1)} options={socialChartOpts} height={90} />
-              </div>
-            </div>
-            <div className="brand-card-body">
-              <div>
-                <div className="text-value">973k</div>
-                <div className="text-uppercase text-muted small">followers</div>
-              </div>
-              <div>
-                <div className="text-value">1.792</div>
-                <div className="text-uppercase text-muted small">tweets</div>
-              </div>
-            </div>
-          </div>
-        </Col>
-
-        <Col xs="6" sm="6" lg="3">
-          <div className="brand-card">
-            <div className="brand-card-header bg-linkedin">
-              <i className="fa fa-linkedin"></i>
-              <div className="chart-wrapper">
-                <Line data={makeSocialBoxData(2)} options={socialChartOpts} height={90} />
-              </div>
-            </div>
-            <div className="brand-card-body">
-              <div>
-                <div className="text-value">500+</div>
-                <div className="text-uppercase text-muted small">contacts</div>
-              </div>
-              <div>
-                <div className="text-value">292</div>
-                <div className="text-uppercase text-muted small">feeds</div>
-              </div>
-            </div>
-          </div>
-        </Col>
-
-        <Col xs="6" sm="6" lg="3">
-          <div className="brand-card">
-            <div className="brand-card-header bg-google-plus">
-              <i className="fa fa-google-plus"></i>
-              <div className="chart-wrapper">
-                <Line data={makeSocialBoxData(3)} options={socialChartOpts} height={90} />
-              </div>
-            </div>
-            <div className="brand-card-body">
-              <div>
-                <div className="text-value">894</div>
-                <div className="text-uppercase text-muted small">followers</div>
-              </div>
-              <div>
-                <div className="text-value">92</div>
-                <div className="text-uppercase text-muted small">circles</div>
-              </div>
-            </div>
-          </div>
         </Col>
       </Row>
 

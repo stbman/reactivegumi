@@ -9951,5 +9951,8 @@ th.topics-cell {
 .navbar-nav {
   margin-right: 2%; }
 
+.card-height {
+  height: 180px; }
+
 html body .app.flex-row.align-items-center {
   height: 100vh; }

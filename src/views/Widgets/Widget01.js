@@ -31,7 +31,7 @@ class Widget01 extends Component {
 
     // demo purposes only
     const progress = { style: '', color: color, value: value };
-    const card = { style: '', bgColor: '' };
+    const card = { style: '', bgColor: '', height: 'card-height' };
 
     if (variant === 'inverse') {
       progress.style = 'progress-white';
@@ -40,16 +40,17 @@ class Widget01 extends Component {
       card.bgColor = 'bg-' + color;
     }
 
-    const classes = mapToCssModules(classNames(className, card.style, card.bgColor), cssModule);
+    const classes = mapToCssModules(classNames(className, card.style, card.bgColor, card.height), cssModule);
     progress.style = classNames('progress-xs my-3', progress.style);
 
     return (
       <Card className={classes} {...attributes}>
         <CardBody>
-          <div className="h4 m-0">{header}</div>
-          <div>{mainText}</div>
-          <Progress className={progress.style} color={progress.color} value={progress.value} />
-          <small className="text-muted">{smallText}</small>
+          <div className="text-value">{header}</div>
+          <div><strong>{mainText}</strong> posts</div>
+          <hr size="3"></hr>
+          {/* <Progress className={progress.style} color={progress.color} value={progress.value} /> */}
+          <small className="text-muted">Posts by: {smallText}</small>
           <div>{children}</div>
         </CardBody>
       </Card>

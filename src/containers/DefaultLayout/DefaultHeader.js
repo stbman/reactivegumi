@@ -53,9 +53,9 @@ class DefaultHeader extends Component {
             <strong>Today's Date: </strong>{this.dateDisplay}
           </NavItem>
 
-          <NavItem className="d-md-down-none">
+          {/* <NavItem className="d-md-down-none">
             <button className="btn btn-outline-info btn-block" id="import-file-btn">Import File Button</button>
-          </NavItem>
+          </NavItem> */}
         </Nav>
       </React.Fragment>
     );
