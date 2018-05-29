@@ -2,29 +2,16 @@ import React, { Component } from 'react';
 import { Bar, Line, Radar } from 'react-chartjs-2';
 import Graph from 'react-graph-vis';
 import {
-  Badge,
-  Button,
-  ButtonDropdown,
-  ButtonGroup,
-  ButtonToolbar,
   Card,
   CardBody,
   CardFooter,
   CardHeader,
   CardTitle,
   Col,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  Progress,
   Row,
   Table,
 } from 'reactstrap';
 import Widget02 from '../../views/Widgets/Widget02'
-import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
-import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities'
-import { read } from 'fs';
 
 import profile from '../../assets/img/profile/lynnette.jpeg'
 
@@ -84,6 +71,42 @@ const radar = {
     }
   }
 };
+
+const experts = [
+  {
+    'name': 'Tan Kah Siong',
+    'division': 'Digital Hub',
+    'topics': 'natural language processing'
+  },
+  {
+    'name': 'Gumi',
+    'division': 'C4ID',
+    'topics': 'kernel machine learning'
+  },
+  {
+    'name': 'Kevin, Yih Liang Koo',
+    'division': 'Digital Hub',
+    'topics': 'ai, voiceradual use nature'
+  }  
+]
+
+const twitter = [
+  {
+    'handle': 'AI @DeepLearn007',
+    'description': '#ArtificialIntelligence #MachineLearning #DeepLearning',
+    'lastPost': 'The Neural Network Zoo'
+  },
+  {
+    'handle': 'Montréal.AI @Montreal_AI',
+    'description': '1er conglomérat de l#IA a #Montreal',
+    'lastPost': 'http://Montreal.AI  Joint Transformative AI Engineering Task Force'
+  },
+  {
+    'handle': 'Omar Sultan AlOlama @OmarSAlolama',
+    'description': 'Minister of State for Artificial Intelligence at UAE',
+    'lastPost': 'Very warm welcome to Sheikh Abdullah and his delegation of UAE Ministers to Canada...'
+  }
+]
 
 const networkGraph = {
   graph: {
@@ -463,13 +486,13 @@ class User extends Component {
       <div className="animated fadeIn">
       
         <Row>
-          <Col sm="8">
+          <Col sm="4">
             <Widget02 className="profile-card" header="Tan Jia Hui" mainText="Head (Tech Office), Digital Hub" pic={ profile } firstPost={ this.state.firstPost } lastPost={ this.state.lastPostedOn }>
             </Widget02>
           </Col>
 
           <Col sm="4">
-            <Card>
+            <Card className="profile-card">
               <CardHeader>
                 My Proficiency Levels
               </CardHeader>
@@ -578,6 +601,7 @@ class User extends Component {
               </CardBody>
             </Card>
           </Col>
+          
           <Col sm="4">
             <Row>
               <Card>
@@ -588,7 +612,28 @@ class User extends Component {
                   </div>
                 </CardHeader>
                 <CardBody>
-                Add a table here on Expert Name/ Article
+                <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                    <thead className="thead-light">
+                    <tr>
+                      <th className="name-cell">Name</th>
+                      <th className="content-cell">Areas</th>
+                    </tr>
+                    </thead>
+                    <tbody>{experts.map(function(item, key) {
+                      return (
+                          <tr key = {key}>
+                            <td>
+                              <div >{item.name}</div>
+                              <div className="text-muted">{item.division}</div>
+                            </td>
+                            <td>
+                              {item.topics}
+                            </td>
+                        </tr>
+                        )
+                    })}
+                    </tbody>
+                  </Table>
                 </CardBody>
               </Card>
             </Row>
@@ -601,8 +646,30 @@ class User extends Component {
                   </div>
                 </CardHeader>
                 <CardBody>
-                Add a table here on Twitter Name/ Article
-                </CardBody>
+                  <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                      <thead className="thead-light">
+                      <tr>
+                        <th className="name-cell">Twitter Handle</th>
+                        <th className="content-cell">Latest</th>
+                      </tr>
+                      </thead>
+                      <tbody>{twitter.map(function(item, key) {
+                        return (
+                            <tr key = {key}>
+                              <td>
+                                {/* <div><a href={"http://www.twitter.com/" + {item.handle}} target="_blank">{item.handle}</a></div> */}
+                                <div>{item.handle}</div>
+                                {/* <div className="text-muted">{item.description}</div> */}
+                              </td>
+                              <td>
+                                {item.description}
+                              </td>
+                          </tr>
+                          )
+                      })}
+                      </tbody>
+                    </Table>
+                  </CardBody>
               </Card>
             </Row>           
           </Col>

@@ -65,22 +65,28 @@ class Widget02 extends Component {
         <CardBody className={card.classes} {...attributes}>
           {/* {blockIcon(card.icon)} */}
           <Row>
-            <Col sm="3">
+            <Col sm="4">
               <img src={pic} alt={mainText} className="user-image"/>
             </Col>
-            <Col sm="8">
+            <Col sm="10">
               <div className={lead.classes}>{header}</div>
               <div className="text-muted text-uppercase font-weight-bold font-xs">{mainText}</div>
-
               <hr size="3"></hr>
-              <div><strong>First Posted On: </strong>{firstPost}</div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+            <div><strong>First Posted On: </strong>{firstPost}</div>
               <div><strong>Latest Post:</strong>
                 <div>{lastPost.content}</div>
                 <div><a href={decodeURIComponent(lastPost.link)} target="_blank">Read More...</a></div>
-                <div><span className="text-muted">{lastPost.date}</span></div>
+                <div><span className="text-muted">{lastPost.date}</span>
               </div>
+            </div>
             </Col>
           </Row>
+
         </CardBody>
         {cardFooter()}
       </Card>

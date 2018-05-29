@@ -9955,11 +9955,14 @@ th.topics-cell {
   height: 180px; }
 
 .user-image {
-  width: 150px;
-  height: 150px; }
+  width: 100px;
+  height: 100px; }
 
 .profile-card {
   height: 320px; }
+
+.name-cell {
+  width: 50%; }
 
 html body .app.flex-row.align-items-center {
   height: 100vh; }
