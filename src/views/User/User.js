@@ -56,7 +56,7 @@ const radar = {
   labels: ['Web Development', 'Data Science', 'Data Engineering', 'Web Design', 'Coding'],
   datasets: [
     {
-      label: 'My Second dataset',
+      label: 'My Proficiency dataset',
       backgroundColor: 'rgba(255,99,132,0.2)',
       borderColor: 'rgba(255,99,132,1)',
       pointBackgroundColor: 'rgba(255,99,132,1)',
@@ -204,7 +204,7 @@ class User extends Component {
         </Row>
 
         <Row>
-          <div class="card-deck">
+          <div className="card-deck">
           <Col sm="8">
             <Card>
               <CardHeader>
@@ -324,7 +324,7 @@ class User extends Component {
 
         <Row>
           <Col>
-            <Card>
+            <Card id="networkgraph">
               <CardHeader>
                 My Network Graph
                 <div className="card-header-actions">
@@ -332,7 +332,7 @@ class User extends Component {
                 </div>
               </CardHeader>
               <CardBody>
-                <Graph graph={NetworkGraph['graph']} options={NetworkGraph['options']} events={NetworkGraph['events']} />
+                <Graph style={{ height: "500px"}} graph={NetworkGraph['graph']} options={NetworkGraph['options']} events={NetworkGraph['events']} />
               </CardBody>
             </Card>
           </Col>
