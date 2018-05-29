@@ -33,3 +33,4 @@ data_processing/*.tsv
 .vscode/
 
 src/assets/img/profile
+src/assets/data
