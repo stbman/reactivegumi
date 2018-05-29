@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Bar, Line } from 'react-chartjs-2';
+import { Bar, Line, Radar } from 'react-chartjs-2';
 import {
   Badge,
   Button,
@@ -27,6 +27,7 @@ import { read } from 'fs';
 
 import profile from '../../assets/img/profile/lynnette.jpeg'
 
+//TODO: Get this generated
 let topics = [
   {
     'topic': 'ai',
@@ -62,6 +63,27 @@ let topics = [
   }  
 ]
 
+const radar = {
+  labels: ['Web Development', 'Data Science', 'Data Engineering', 'Web Design', 'Coding'],
+  datasets: [
+    {
+      label: 'My Second dataset',
+      backgroundColor: 'rgba(255,99,132,0.2)',
+      borderColor: 'rgba(255,99,132,1)',
+      pointBackgroundColor: 'rgba(255,99,132,1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(255,99,132,1)',
+      data: [2, 3, 3, 2, 1],
+    }
+  ],
+  options: {
+      legend: {
+        display: false,
+    }
+  }
+};
+
 class User extends Component {
   constructor(props) {
     super(props);
@@ -88,7 +110,19 @@ class User extends Component {
           </Col>
 
           <Col sm="4">
+            <Card>
+              <CardHeader>
+                My Proficiency Levels
+              </CardHeader>
+              <CardBody>
+                <div className="chart-wrapper">
+                  <Radar data={radar} options={radar['options']}/>
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
 
+          <Col sm="4">
             <Row>
             <Col sm="6">
               <Card>
@@ -145,10 +179,12 @@ class User extends Component {
         </Row>
 
         <Row>
-          <Col>
+          <Col sm="8">
             <Card>
+              <CardHeader>
+                Topics I Posted
+              </CardHeader>
               <CardBody className="pb-4">
-                <h6>Topics Posted</h6>
                 <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
                     <thead className="thead-light">
                     <tr>
@@ -183,7 +219,35 @@ class User extends Component {
               </CardBody>
             </Card>
           </Col>
-        </Row> 
+          <Col sm="4">
+            <Row>
+              <Card>
+                <CardHeader>
+                  Experts in My Community
+                  <div className="card-header-actions">
+                      <small className="text-muted">Based on articles I posted</small>
+                  </div>
+                </CardHeader>
+                <CardBody>
+                Add a table here on Expert Name/ Article
+                </CardBody>
+              </Card>
+            </Row>
+            <Row>
+              <Card>
+                <CardHeader>
+                  Experts on Twitter
+                  <div className="card-header-actions">
+                      <small className="text-muted">Based on articles I posted</small>
+                  </div>
+                </CardHeader>
+                <CardBody>
+                Add a table here on Twitter Name/ Article
+                </CardBody>
+              </Card>
+            </Row>           
+          </Col>
+        </Row>       
 
       </div>
     );

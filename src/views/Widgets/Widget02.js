@@ -73,12 +73,6 @@ class Widget02 extends Component {
               <div className="text-muted text-uppercase font-weight-bold font-xs">{mainText}</div>
 
               <hr size="3"></hr>
-              <div>
-                <strong>Proficiency: </strong>
-                  Web Development (PL3), Web Scraping (PL2)
-              </div>
-
-              <hr size="3"></hr>
               <div><strong>First Posted On: </strong>{firstPost}</div>
               <div><strong>Latest Post:</strong>
                 <div>{lastPost.content}</div>
