@@ -204,6 +204,7 @@ class User extends Component {
         </Row>
 
         <Row>
+          <div class="card-deck">
           <Col sm="8">
             <Card>
               <CardHeader>
@@ -246,6 +247,7 @@ class User extends Component {
           </Col>
           
           <Col sm="4">
+            <Card>
             <Row>
               <Card>
                 <CardHeader>
@@ -314,8 +316,10 @@ class User extends Component {
                     </Table>
                   </CardBody>
               </Card>
-            </Row>           
+            </Row> 
+            </Card>          
           </Col>
+          </div>
         </Row>       
 
         <Row>
