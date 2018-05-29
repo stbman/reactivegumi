@@ -9967,5 +9967,8 @@ th.topics-cell {
 #networkgraph {
   height: 500px; }
 
+.fill-card {
+  height: 97%; }
+
 html body .app.flex-row.align-items-center {
   height: 100vh; }
