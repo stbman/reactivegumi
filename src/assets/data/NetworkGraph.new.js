@@ -147,8 +147,7 @@ export const NetworkGraph = {
           from:   {enabled: false, scaleFactor:1, type:'arrow'}
         },
         width: 2
-      },
-      labelHighlightBold: true
+      }
     },
     events: {
       stabilizationIterationsDone: function(event) {

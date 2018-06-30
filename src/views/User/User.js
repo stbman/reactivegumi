@@ -16,10 +16,6 @@ import Widget02 from '../../views/Widgets/Widget02'
 import profile from '../../assets/img/profile/lynnette.jpeg'
 import { NetworkGraph } from '../../assets/data/NetworkGraph.new'
 import axios from 'axios';
-//TODO: Get this generated
-
-
-
 
 const radar = {
   labels: ['Web Development', 'Data Science', 'Data Engineering', 'Web Design', 'Coding'],
@@ -41,81 +37,6 @@ const radar = {
     }
   }
 };
-
-const experts = [
-  {
-    'name': 'Tan Kah Siong',
-    'division': 'Digital Hub',
-    'topics': 'natural language processing'
-  },
-  {
-    'name': 'Gumi',
-    'division': 'C4ID',
-    'topics': 'kernel machine learning'
-  },
-  {
-    'name': 'Kevin, Yih Liang Koo',
-    'division': 'Digital Hub',
-    'topics': 'ai, voiceradual use nature'
-  }  
-]
-
-const twitter = [
-  {
-    'handle': 'AI @DeepLearn007',
-    'description': '#ArtificialIntelligence #MachineLearning #DeepLearning',
-    'lastPost': 'The Neural Network Zoo'
-  },
-  {
-    'handle': 'Montréal.AI @Montreal_AI',
-    'description': '1er conglomérat de l#IA a #Montreal',
-    'lastPost': 'http://Montreal.AI  Joint Transformative AI Engineering Task Force'
-  },
-  {
-    'handle': 'Omar Sultan AlOlama @OmarSAlolama',
-    'description': 'Minister of State for Artificial Intelligence at UAE',
-    'lastPost': 'Very warm welcome to Sheikh Abdullah and his delegation of UAE Ministers to Canada...'
-  }
-]
-
-const cscCourses = [
-  {
-    'courseName': 'Data Visualisation Begins with Me',
-    'nextDate': '21 July 2018',
-    'friendsAttended': 'Alan Lim, Tan Jia Hui',
-    'requiredFor': 'Singapore Public Officer working with data or responsible for communication of data'
-  },
-  {
-    'courseName': 'Data Visualisation for Effective Communications',
-    'nextDate': '05 July 2018',
-    'friendsAttended': 'Matthew Yong K M, Teng Teng Ng',
-    'requiredFor': 'Singapore Public officer who is responsible for producing or communicating statistics to your stakeholders'
-  },
-  {
-    'courseName': 'CSC-Coursera Data Analytics Learning Bundle 1: Data Analytics - Basic Principles and Applications',
-    'nextDate': '01 October 2018',
-    'friendsAttended': 'Kang Shian Chin, Jacquelyn Chew',
-    'requiredFor': 'Those who manage a team which needs to use data to improve performance and/or provide insights into service innovation'
-  } 
-]
-
-const skillsFutureCourses = [
-  {
-    'courseName': 'Data Visualization Fundamentals',
-    'nextDate': '22 October 2018',
-    'friendsAttended': 'Leo Deng Yenn, Tan Beng Hock'
-  },
-  {
-    'courseName': 'Collection, Management and Analysis of Quantitative Data',
-    'nextDate': '02 July 2018',
-    'friendsAttended': 'Su Shiyan, Ong JunKai'
-  },
-  {
-    'courseName': 'Building a Data Science Team',
-    'nextDate': '09 July 2018',
-    'friendsAttended': 'Lek Juinn Feng, Alex Lee Yeaw Lip'
-  }
-]
 
 class User extends Component {
   constructor(props) {
@@ -141,253 +62,222 @@ class User extends Component {
   const url = "data/user_dummy.json";
   const res = await axios.get(url);
   const jsonData = await res.data;
-  console.log(jsonData)
   await this.setStateAsync({data: jsonData});
   await this.setStateAsync({dataLoaded: true});
   }
 
 
   render() {
-    console.log(this.state.data)
-    const topics = this.state.data["topics"]
-    return (
-      <div className="animated fadeIn">
-      
-        <Row>
-          <Col sm="4">
-            <Widget02 className="profile-card" header="Lynnette Ng" mainText="Head (Tech Office), Digital Hub" pic={ profile } firstPost={ this.state.firstPost } lastPost={ this.state.lastPostedOn }>
-            </Widget02>
-          </Col>
+    if (this.state.dataLoaded === true) {
+      const topics = this.state.data["topics"]
+      const experts = this.state.data["experts"]
+      const skillsFutureCourses = this.state.data["skillsFutureCourses"]
+      const cscCourses = this.state.data["cscCourses"]
+      const twitter = this.state.data["twitter"]
 
-          <Col sm="4">
-            <Card className="profile-card">
-              <CardHeader>
-                My Proficiency Levels
-              </CardHeader>
-              <CardBody>
-                <div className="chart-wrapper">
-                  <Radar data={radar} options={radar['options']}/>
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
+      return (
+        <div className="animated fadeIn">
+        
+          <Row>
+            <Col sm="4">
+              <Widget02 className="profile-card" header="Lynnette Ng" mainText="Head (Tech Office), Digital Hub" pic={ profile } firstPost={ this.state.firstPost } lastPost={ this.state.lastPostedOn }>
+              </Widget02>
+            </Col>
 
-          <Col sm="4">
-            <Row>
-            <Col sm="6">
-              <Card>
-                <CardBody>
-                  <div className="h1 text-muted text-right mb-2">
-                  <i className="icon-speech"></i>
-                  </div>
-                  <div className="h4 mb-0" style={{color:"#63c2de"}}>10</div>
-                  <small className="text-muted text-uppercase font-weight-bold">Posts</small>
-                </CardBody>
-              </Card>
-              </Col>
-
-              <Col sm="6">
-              <Card>
-                <CardBody>
-                  <div className="h1 text-muted text-right mb-2">
-                  <i className="icon-calendar"></i>
-                  </div>
-                  <div className="h4 mb-0" style={{color:"#20a8d8"}}>10</div>
-                  <small className="text-muted text-uppercase font-weight-bold">Posts This Month</small>
-                </CardBody>
-              </Card>
-              </Col>
-            </Row>
-
-            <Row>
-            <Col sm="6">
-              <Card>
-                <CardBody>
-                  <div className="h1 text-muted text-right mb-2">
-                  <i className="icon-user-follow"></i>
-                  </div>
-                  <div className="h4 mb-0" style={{color:"#ffc107"}}>60</div>
-                  <small className="text-muted text-uppercase font-weight-bold">Friends Liked My Posts</small>
-                </CardBody>
-              </Card>
-              </Col>
-
-              <Col sm="6">
-              <Card>
-                <CardBody>
-                  <div className="h1 text-muted text-right mb-2">
-                  <i className="icon-people"></i>
-                  </div>
-                  <div className="h4 mb-0" style={{color:"#f86c6b"}}>182</div>
-                  <small className="text-muted text-uppercase font-weight-bold">Friends Seen My Posts</small>
-                </CardBody>
-              </Card>
-              </Col>
-            </Row>
-
-          </Col>
-        </Row>
-
-        <Row>
-          <Col sm="8">
-              <Card className="fill-card">
+            <Col sm="4">
+              <Card className="profile-card">
                 <CardHeader>
-                  Recommended Civil Service College Courses
+                  My Proficiency Levels
                 </CardHeader>
-                <CardBody className="pb-4">
-                  <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
-                      <thead className="thead-light">
-                      </thead>
-                      <tbody>{cscCourses.map(function(item, key) {
-                        return (
-                            <tr key = {key}>
-                              <td>
-                                <div><b><u>{item.courseName}</u></b></div>
-                                <div><span><b>Next Course Date:</b> {item.nextDate}</span></div>
-                                <div><span><b>Friends Attended:</b> {item.friendsAttended}</span></div>
-                                <div><span><b>Required For:</b> {item.requiredFor}</span></div>
-                              </td>
-                          </tr>
-                          )
-                      })}
-                      </tbody>
-                    </Table>
+                <CardBody>
+                  <div className="chart-wrapper">
+                    <Radar data={radar} options={radar['options']}/>
+                  </div>
                 </CardBody>
               </Card>
             </Col>
 
-          <Col sm="4">
+            <Col sm="4">
+              <Row>
+              <Col sm="6">
+                <Card>
+                  <CardBody>
+                    <div className="h1 text-muted text-right mb-2">
+                    <i className="icon-speech"></i>
+                    </div>
+                    <div className="h4 mb-0" style={{color:"#63c2de"}}>10</div>
+                    <small className="text-muted text-uppercase font-weight-bold">Posts</small>
+                  </CardBody>
+                </Card>
+                </Col>
+
+                <Col sm="6">
+                <Card>
+                  <CardBody>
+                    <div className="h1 text-muted text-right mb-2">
+                    <i className="icon-calendar"></i>
+                    </div>
+                    <div className="h4 mb-0" style={{color:"#20a8d8"}}>10</div>
+                    <small className="text-muted text-uppercase font-weight-bold">Posts This Month</small>
+                  </CardBody>
+                </Card>
+                </Col>
+              </Row>
+
+              <Row>
+              <Col sm="6">
+                <Card>
+                  <CardBody>
+                    <div className="h1 text-muted text-right mb-2">
+                    <i className="icon-user-follow"></i>
+                    </div>
+                    <div className="h4 mb-0" style={{color:"#ffc107"}}>60</div>
+                    <small className="text-muted text-uppercase font-weight-bold">Friends Liked My Posts</small>
+                  </CardBody>
+                </Card>
+                </Col>
+
+                <Col sm="6">
+                <Card>
+                  <CardBody>
+                    <div className="h1 text-muted text-right mb-2">
+                    <i className="icon-people"></i>
+                    </div>
+                    <div className="h4 mb-0" style={{color:"#f86c6b"}}>182</div>
+                    <small className="text-muted text-uppercase font-weight-bold">Friends Seen My Posts</small>
+                  </CardBody>
+                </Card>
+                </Col>
+              </Row>
+
+            </Col>
+          </Row>
+
+          <Row>
+            <Col sm="8">
+                <Card className="fill-card">
+                  <CardHeader>
+                    Recommended Civil Service College Courses
+                  </CardHeader>
+                  <CardBody className="pb-4">
+                    <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                        <thead className="thead-light">
+                        </thead>
+                        <tbody>{cscCourses.map(function(item, key) {
+                          return (
+                              <tr key = {key}>
+                                <td>
+                                  <div><b><u>{item.courseName}</u></b></div>
+                                  <div><span><b>Next Course Date:</b> {item.nextDate}</span></div>
+                                  <div><span><b>Friends Attended:</b> {item.friendsAttended}</span></div>
+                                  <div><span><b>Required For:</b> {item.requiredFor}</span></div>
+                                </td>
+                            </tr>
+                            )
+                        })}
+                        </tbody>
+                      </Table>
+                  </CardBody>
+                </Card>
+              </Col>
+
+            <Col sm="4">
+                <Card className="fill-card">
+                  <CardHeader>
+                    Recommended Skills Future Courses
+                  </CardHeader>
+                  <CardBody className="pb-4">
+                    <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                        <thead className="thead-light">
+                        </thead>
+                        <tbody>{skillsFutureCourses.map(function(item, key) {
+                          return (
+                              <tr key = {key}>
+                                <td>
+                                  <div><b><u>{item.courseName}</u></b></div>
+                                  <div><span><b>Next Course Date:</b> {item.nextDate}</span></div>
+                                  <div><span><b>Friends Attended:</b> {item.friendsAttended}</span></div>
+                                </td>
+                            </tr>
+                            )
+                        })}
+                        </tbody>
+                      </Table>
+                  </CardBody>
+                </Card>
+              </Col>
+
+          </Row>
+
+
+          <Row>
+            <Col sm="8">
               <Card className="fill-card">
                 <CardHeader>
-                  Recommended Skills Future Courses
+                  Topics I Posted
                 </CardHeader>
                 <CardBody className="pb-4">
-                  <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
-                      <thead className="thead-light">
-                      </thead>
-                      <tbody>{skillsFutureCourses.map(function(item, key) {
-                        return (
-                            <tr key = {key}>
-                              <td>
-                                <div><b><u>{item.courseName}</u></b></div>
-                                <div><span><b>Next Course Date:</b> {item.nextDate}</span></div>
-                                <div><span><b>Friends Attended:</b> {item.friendsAttended}</span></div>
-                              </td>
-                          </tr>
-                          )
-                      })}
-                      </tbody>
-                    </Table>
-                </CardBody>
-              </Card>
-            </Col>
-
-        </Row>
-
-
-        <Row>
-          <Col sm="8">
-            <Card className="fill-card">
-              <CardHeader>
-                Topics I Posted
-              </CardHeader>
-              <CardBody className="pb-4">
-                <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
-                    <thead className="thead-light">
-                    <tr>
-                      <th className="topics-cell">Topic</th>
-                      <th>Total Likes</th>
-                      <th>Total Reads</th>
-                      <th className="content-cell">Posts</th>
-                    </tr>
-                    </thead>
-                    <tbody>{topics.map(function(item, key) {
-                      return (
-                          <tr key = {key}>
-                            <td>
-                              {item.topic}
-                            </td>
-                            <td>
-                              {item.likes}
-                            </td>
-                            <td>
-                              {item.seen}
-                            </td>
-                            <td>
-                              <div>{item.postContent}</div>
-                              <div><a href={decodeURIComponent(item.postLink)} target="_blank">Read More...</a></div>
-                              <div><span className="text-muted">{item.postDate}</span></div>
-                            </td>
-                        </tr>
-                        )
-                    })}
-                    </tbody>
-                  </Table>
-              </CardBody>
-            </Card>
-          </Col>
-          
-          <Col sm="4">
-            <Row>
-              <Card>
-                <CardHeader>
-                  Experts in My Community
-                  <div className="card-header-actions">
-                      <small className="text-muted">Based on articles I posted</small>
-                  </div>
-                </CardHeader>
-                <CardBody>
-                <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
-                    <thead className="thead-light">
-                    <tr>
-                      <th className="name-cell">Name</th>
-                      <th className="content-cell">Areas</th>
-                    </tr>
-                    </thead>
-                    <tbody>{experts.map(function(item, key) {
-                      return (
-                          <tr key = {key}>
-                            <td>
-                              <div >{item.name}</div>
-                              <div className="text-muted">{item.division}</div>
-                            </td>
-                            <td>
-                              {item.topics}
-                            </td>
-                        </tr>
-                        )
-                    })}
-                    </tbody>
-                  </Table>
-                </CardBody>
-              </Card>
-            </Row>
-            <Row>
-              <Card>
-                <CardHeader>
-                  Experts on Twitter
-                  <div className="card-header-actions">
-                      <small className="text-muted">Based on articles I posted</small>
-                  </div>
-                </CardHeader>
-                <CardBody>
                   <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
                       <thead className="thead-light">
                       <tr>
-                        <th className="name-cell">Twitter Handle</th>
-                        <th className="content-cell">Latest</th>
+                        <th className="topics-cell">Topic</th>
+                        <th>Total Likes</th>
+                        <th>Total Reads</th>
+                        <th className="content-cell">Posts</th>
                       </tr>
                       </thead>
-                      <tbody>{twitter.map(function(item, key) {
+                      <tbody>{topics.map(function(item, key) {
                         return (
                             <tr key = {key}>
                               <td>
-                                {/* <div><a href={"http://www.twitter.com/" + {item.handle}} target="_blank">{item.handle}</a></div> */}
-                                <div>{item.handle}</div>
-                                {/* <div className="text-muted">{item.description}</div> */}
+                                {item.topic}
                               </td>
                               <td>
-                                {item.description}
+                                {item.likes}
+                              </td>
+                              <td>
+                                {item.seen}
+                              </td>
+                              <td>
+                                <div>{item.postContent}</div>
+                                <div><a href={decodeURIComponent(item.postLink)} target="_blank">Read More...</a></div>
+                                <div><span className="text-muted">{item.postDate}</span></div>
+                              </td>
+                          </tr>
+                          )
+                      })}
+                      </tbody>
+                    </Table>
+                </CardBody>
+              </Card>
+            </Col>
+            
+            <Col sm="4">
+              <Row>
+                <Card>
+                  <CardHeader>
+                    Experts in My Community
+                    <div className="card-header-actions">
+                        <small className="text-muted">Based on articles I posted</small>
+                    </div>
+                  </CardHeader>
+                  <CardBody>
+                  <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                      <thead className="thead-light">
+                      <tr>
+                        <th className="name-cell">Name</th>
+                        <th className="content-cell">Areas</th>
+                      </tr>
+                      </thead>
+                      <tbody>{experts.map(function(item, key) {
+                        return (
+                            <tr key = {key}>
+                              <td>
+                                <div >{item.name}</div>
+                                <div className="text-muted">{item.division}</div>
+                              </td>
+                              <td>
+                                {item.topics}
                               </td>
                           </tr>
                           )
@@ -395,29 +285,72 @@ class User extends Component {
                       </tbody>
                     </Table>
                   </CardBody>
+                </Card>
+              </Row>
+              <Row>
+                <Card>
+                  <CardHeader>
+                    Experts on Twitter
+                    <div className="card-header-actions">
+                        <small className="text-muted">Based on articles I posted</small>
+                    </div>
+                  </CardHeader>
+                  <CardBody>
+                    <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                        <thead className="thead-light">
+                        <tr>
+                          <th className="name-cell">Twitter Handle</th>
+                          <th className="content-cell">Latest</th>
+                        </tr>
+                        </thead>
+                        <tbody>{twitter.map(function(item, key) {
+                          return (
+                              <tr key = {key}>
+                                <td>
+                                  {/* <div><a href={"http://www.twitter.com/" + {item.handle}} target="_blank">{item.handle}</a></div> */}
+                                  <div>{item.handle}</div>
+                                  {/* <div className="text-muted">{item.description}</div> */}
+                                </td>
+                                <td>
+                                  {item.description}
+                                </td>
+                            </tr>
+                            )
+                        })}
+                        </tbody>
+                      </Table>
+                    </CardBody>
+                </Card>
+              </Row>          
+            </Col>
+          </Row>       
+
+          <Row>
+            <Col>
+              <Card id="networkgraph">
+                <CardHeader>
+                  My Network Graph
+                  <div className="card-header-actions">
+                    <small className="text-muted">Based on friends reading my posts</small>
+                  </div>
+                </CardHeader>
+                <CardBody>
+                  <Graph style={{ height: "700px"}} graph={NetworkGraph['graph']} options={NetworkGraph['options']} events={NetworkGraph['events']} />
+                </CardBody>
               </Card>
-            </Row>          
-          </Col>
-        </Row>       
+            </Col>
+          </Row>
 
-        <Row>
-          <Col>
-            <Card id="networkgraph">
-              <CardHeader>
-                My Network Graph
-                <div className="card-header-actions">
-                  <small className="text-muted">Based on friends reading my posts</small>
-                </div>
-              </CardHeader>
-              <CardBody>
-                <Graph style={{ height: "700px"}} graph={NetworkGraph['graph']} options={NetworkGraph['options']} events={NetworkGraph['events']} />
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-
-      </div>
-    );
+        </div>
+      );
+    }
+    else {
+      return (
+        <div>
+          Loading...
+        </div>
+      );
+    }
   }
 }
 
