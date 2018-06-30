@@ -20,7 +20,10 @@ class DefaultHeader extends Component {
     var day = date.getDate();
     var month = date.getMonth();
     var year = date.getFullYear();
-    this.dateDisplay = day + " " + month + " " + year;
+
+    //this.dateDisplay = day + " " + month + " " + year;
+
+    this.dateDisplay = "1 July 2018";
 
     this.state = {
       data: this.props.data
