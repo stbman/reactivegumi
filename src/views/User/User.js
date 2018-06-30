@@ -69,11 +69,12 @@ class User extends Component {
 
   render() {
     if (this.state.dataLoaded === true) {
-      const topics = this.state.data["topics"]
-      const experts = this.state.data["experts"]
-      const skillsFutureCourses = this.state.data["skillsFutureCourses"]
-      const cscCourses = this.state.data["cscCourses"]
-      const twitter = this.state.data["twitter"]
+      const dummy_user_id = '52988281' // id to match the telegram
+      const topics = this.state.data[dummy_user_id]["topics"]
+      const experts = this.state.data[dummy_user_id]["experts"]
+      const skillsFutureCourses = this.state.data[dummy_user_id]["skillsFutureCourses"]
+      const cscCourses = this.state.data[dummy_user_id]["cscCourses"]
+      const twitter = this.state.data[dummy_user_id]["twitter"]
 
       return (
         <div className="animated fadeIn">
