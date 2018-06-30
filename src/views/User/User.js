@@ -127,15 +127,24 @@ const cscCourses = [
     'nextDate': '01 October 2018',
     'friendsAttended': 'Kang Shian Chin, Jacquelyn Chew',
     'requiredFor': 'Those who manage a team which needs to use data to improve performance and/or provide insights into service innovation'
-  }
+  } 
 ]
 
 const skillsFutureCourses = [
   {
-    'courseName': 'Data Visualisation Begins with Me',
-    'nextDate': '21 July 2018',
-    'friendsAttended': 'Alan Lim, Tan Jia Hui',
-    'requiredFor': 'Singapore Public Officer working with data or responsible for communication of data'
+    'courseName': 'Data Visualization Fundamentals',
+    'nextDate': '22 October 2018',
+    'friendsAttended': 'Leo Deng Yenn, Tan Beng Hock'
+  },
+  {
+    'courseName': 'Collection, Management and Analysis of Quantitative Data',
+    'nextDate': '02 July 2018',
+    'friendsAttended': 'Su Shiyan, Ong JunKai'
+  },
+  {
+    'courseName': 'Building a Data Science Team',
+    'nextDate': '09 July 2018',
+    'friendsAttended': 'Lek Juinn Feng, Alex Lee Yeaw Lip'
   }
 ]
 
@@ -242,9 +251,6 @@ class User extends Component {
                 <CardBody className="pb-4">
                   <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
                       <thead className="thead-light">
-                      <tr>
-                        <th className="content-cell"></th>
-                      </tr>
                       </thead>
                       <tbody>{cscCourses.map(function(item, key) {
                         return (
@@ -272,9 +278,6 @@ class User extends Component {
                 <CardBody className="pb-4">
                   <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
                       <thead className="thead-light">
-                      <tr>
-                        <th className="content-cell"></th>
-                      </tr>
                       </thead>
                       <tbody>{skillsFutureCourses.map(function(item, key) {
                         return (
@@ -283,7 +286,6 @@ class User extends Component {
                                 <div><b><u>{item.courseName}</u></b></div>
                                 <div><span><b>Next Course Date:</b> {item.nextDate}</span></div>
                                 <div><span><b>Friends Attended:</b> {item.friendsAttended}</span></div>
-                                <div><span><b>Required For:</b> {item.requiredFor}</span></div>
                               </td>
                           </tr>
                           )
