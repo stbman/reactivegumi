@@ -109,6 +109,24 @@ const twitter = [
   }
 ]
 
+const cscCourses = [
+  {
+    'courseName': 'Data Visualisation Begins with Me',
+    'nextDate': '21 July 2018',
+    'friendsAttended': 'Alan Lim, Tan Jia Hui',
+    'requiredFor': 'Data Visualisation Proficiency Level 3'
+  }
+]
+
+const skillsFutureCourses = [
+  {
+    'courseName': 'Data Visualisation Begins with Me',
+    'nextDate': '21 July 2018',
+    'friendsAttended': 'Alan Lim, Tan Jia Hui',
+    'requiredFor': 'Data Visualisation Proficiency Level 3'
+  }
+]
+
 class User extends Component {
   constructor(props) {
     super(props);
@@ -167,7 +185,7 @@ class User extends Component {
                   <div className="h1 text-muted text-right mb-2">
                   <i className="icon-calendar"></i>
                   </div>
-                  <div className="h4 mb-0" style={{color:"#20a8d8"}}>4</div>
+                  <div className="h4 mb-0" style={{color:"#20a8d8"}}>10</div>
                   <small className="text-muted text-uppercase font-weight-bold">Posts This Month</small>
                 </CardBody>
               </Card>
@@ -181,8 +199,8 @@ class User extends Component {
                   <div className="h1 text-muted text-right mb-2">
                   <i className="icon-user-follow"></i>
                   </div>
-                  <div className="h4 mb-0" style={{color:"#ffc107"}}>10</div>
-                  <small className="text-muted text-uppercase font-weight-bold">Friends Like Her Posts</small>
+                  <div className="h4 mb-0" style={{color:"#ffc107"}}>60</div>
+                  <small className="text-muted text-uppercase font-weight-bold">Friends Liked My Posts</small>
                 </CardBody>
               </Card>
               </Col>
@@ -194,7 +212,7 @@ class User extends Component {
                   <i className="icon-people"></i>
                   </div>
                   <div className="h4 mb-0" style={{color:"#f86c6b"}}>182</div>
-                  <small className="text-muted text-uppercase font-weight-bold">Friends Seen Her Posts</small>
+                  <small className="text-muted text-uppercase font-weight-bold">Friends Seen My Posts</small>
                 </CardBody>
               </Card>
               </Col>
@@ -202,6 +220,70 @@ class User extends Component {
 
           </Col>
         </Row>
+
+        <Row>
+          <Col sm="8">
+              <Card className="fill-card">
+                <CardHeader>
+                  Recommended Civil Service College Courses
+                </CardHeader>
+                <CardBody className="pb-4">
+                  <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                      <thead className="thead-light">
+                      <tr>
+                        <th className="content-cell"></th>
+                      </tr>
+                      </thead>
+                      <tbody>{cscCourses.map(function(item, key) {
+                        return (
+                            <tr key = {key}>
+                              <td>
+                                <div><b><u>{item.courseName}</u></b></div>
+                                <div><span><b>Next Course Date:</b> {item.postDate}</span></div>
+                                <div><span><b>Friends Attended:</b> {item.friendsAttended}</span></div>
+                                <div><span><b>Required For:</b> {item.requiredFor}</span></div>
+                              </td>
+                          </tr>
+                          )
+                      })}
+                      </tbody>
+                    </Table>
+                </CardBody>
+              </Card>
+            </Col>
+
+          <Col sm="4">
+              <Card className="fill-card">
+                <CardHeader>
+                  Recommended Skills Future Courses
+                </CardHeader>
+                <CardBody className="pb-4">
+                  <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                      <thead className="thead-light">
+                      <tr>
+                        <th className="content-cell"></th>
+                      </tr>
+                      </thead>
+                      <tbody>{skillsFutureCourses.map(function(item, key) {
+                        return (
+                            <tr key = {key}>
+                              <td>
+                                <div><b><u>{item.courseName}</u></b></div>
+                                <div><span><b>Next Course Date:</b> {item.postDate}</span></div>
+                                <div><span><b>Friends Attended:</b> {item.friendsAttended}</span></div>
+                                <div><span><b>Required For:</b> {item.requiredFor}</span></div>
+                              </td>
+                          </tr>
+                          )
+                      })}
+                      </tbody>
+                    </Table>
+                </CardBody>
+              </Card>
+            </Col>
+
+        </Row>
+
 
         <Row>
           <Col sm="8">
