@@ -11,7 +11,7 @@
         },
         {
             "count": 10,
-            "name": "Tan Jia Hui",
+            "name": "Lynnete Ng Hui Xian",
             "last_post_content": "UK announces £1b drive into artificial intelligence",
             "entities": "ai, industry ’s, mouperfect ai voice, nus enterprise, ai imaging technique",
             "last_post": "2018-04-27 09:15:00",
@@ -96,7 +96,7 @@
         },
         {
             "post_time": "2018-04-14 10:28:00",
-            "name": "Tan Jia Hui",
+            "name": "Lynnete Ng Hui Xian",
             "sum": 182,
             "seen_by_max": 22,
             "seen_by_link": "https://onepublicservice.facebook.com/ufi/group/seenby/profile/browser/?id=203577596926346&av=100025053994973",
@@ -192,7 +192,7 @@
         },
         {
             "post_time": "2018-04-25 09:15:00",
-            "name": "Tan Jia Hui",
+            "name": "Lynnete Ng Hui Xian",
             "sum": 8,
             "content": "https://beebom.com/nvidia-feature-repair-images/ Nvidia's AI Imaging Technique Can Repair Damaged Photos Realistically",
             "entities": "ai, industry ’s, mouperfect ai voice, nus enterprise, ai imaging technique",
@@ -214,9 +214,9 @@
     "top_entities": [
         {
             "total_posts": 23,
-            "unique_string": "Gumi (7 posts), Tan Jia Hui (6 posts), Teng Teng Ng (5 posts), Kevin, Yih Liang Koo (3 posts), Tan Kah Siong (2 posts),",
+            "unique_string": "Gumi (7 posts), Lynnete Ng Hui Xian (6 posts), Teng Teng Ng (5 posts), Kevin, Yih Liang Koo (3 posts), Tan Kah Siong (2 posts),",
             "keyword": "ai",
-            "unique_string_2": "Gumi, Tan Jia Hui, Teng Teng Ng, Kevin, Yih Liang Koo, Tan Kah Siong,"
+            "unique_string_2": "Gumi, Lynnete Ng Hui Xian, Teng Teng Ng, Kevin, Yih Liang Koo, Tan Kah Siong,"
         },
         {
             "total_posts": 3,
@@ -226,21 +226,21 @@
         },
         {
             "total_posts": 6,
-            "unique_string": "Gumi (3 posts), Tan Jia Hui (2 posts), Tan Kah Siong (1 posts),",
+            "unique_string": "Gumi (3 posts), Lynnete Ng Hui Xian (2 posts), Tan Kah Siong (1 posts),",
             "keyword": "machine learning",
-            "unique_string_2": "Gumi, Tan Jia Hui, Tan Kah Siong,"
+            "unique_string_2": "Gumi, Lynnete Ng Hui Xian, Tan Kah Siong,"
         },
         {
             "total_posts": 2,
-            "unique_string": "Tan Kah Siong (1 posts), Tan Jia Hui (1 posts),",
+            "unique_string": "Tan Kah Siong (1 posts), Lynnete Ng Hui Xian (1 posts),",
             "keyword": "neural networks",
-            "unique_string_2": "Tan Kah Siong, Tan Jia Hui,"
+            "unique_string_2": "Tan Kah Siong, Lynnete Ng Hui Xian,"
         },
         {
             "total_posts": 2,
-            "unique_string": "Kevin, Yih Liang Koo (1 posts), Tan Jia Hui (1 posts),",
+            "unique_string": "Kevin, Yih Liang Koo (1 posts), Lynnete Ng Hui Xian (1 posts),",
             "keyword": "good",
-            "unique_string_2": "Kevin, Yih Liang Koo, Tan Jia Hui,"
+            "unique_string_2": "Kevin, Yih Liang Koo, Lynnete Ng Hui Xian,"
         }
     ]
 }
