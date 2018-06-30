@@ -15,42 +15,11 @@ import Widget02 from '../../views/Widgets/Widget02'
 
 import profile from '../../assets/img/profile/lynnette.jpeg'
 import { NetworkGraph } from '../../assets/data/NetworkGraph.new'
-
+import axios from 'axios';
 //TODO: Get this generated
-const topics = [
-  {
-    'topic': 'ai',
-    'likes': "3",
-    'seen': "15",
-    'postContent': "UK announces £1b drive into artificial intelligence",
-    'postLink': "https%3A%2F%2Fwww.businesstimes.com.sg%2Fgovernment-economy%2Fuk-announces-%C2%A31b-drive-into-artificial-intelligence&h=ATP4bL2ixfvEBGwBq72MPeLLoQiOKg_3eHfNCPt1D4-GurgJqHIpAkfIuu_2XiZK2igSIp1tEBKYarO9eZA5rlnDqnRRLGzUBl-GbughSCZ5qQUx2iEOpa9b0jBMn7Xa84xDMVk",
-    'postDate': "2018-04-27 09:15:00"
-  },
-  {
-    'topic': 'voice',
-    'likes': "1",
-    'seen': "17",
-    'postContent': "In pursuit of the perfect AI voice",
-    'postLink': "http%3A%2F%2Fflip.it%2FdbGLMs&h=ATPVk9vcR1tVMdYd6DEZU-BhWn0AGJ9sDuTfJArTyzMieNpPS1GhQ-SvThsdsJAPnAUdMCZpbnq9mnNHDZSsnY88SLDtLdmHK74wjrbWgk3fyJsf9tSknk3-EDE-bWlVd5I1OIg",
-    'postDate': "2018-04-19 08:05:00"
-  },
-  {
-    'topic': 'nus enterprise',
-    'likes': "2",
-    'seen': "19",
-    'postContent': "More happenings in Blk 71	NUS Enterprise and Singtel Innov8 launch new hub for cybersecurity startups",
-    'postLink': "https%3A%2F%2Fwww.opengovasia.com%2Farticles%2Fnus-enterprise-and-singtel-innov8-launch-new-hub-for-cybersecurity-startups&h=ATP3EhB23lyAgydx4njuI42qkYs0uKc-tkU5AmDg3lj_zB1d_46ASIF520LqZ-NwjFhuxyFwyeA65aM49f2Es0ZSMA2ROIi4S_L-suJXNkLxhQoe-n4ntLNs8oYxGJ7S0ooCkgs",
-    'postDate': "2018-04-03 23:46:00"
-  },
-  {
-    'topic': 'ai imaging technique',
-    'likes': "2",
-    'seen': "17", 
-    'postContent': "Nvidia's AI Imaging Technique Can Repair Damaged Photos Realistically",
-    'postLink': "https%3A%2F%2Fbeebom.com%2Fnvidia-feature-repair-images%2F&h=ATND9K2Pusn5l0grvny39IyNOsDz9xbxSHII4_jW84Rou7DXxFYKvtsaMj_r2NMiIHDIzojZI8YDNXZrikWVprXG8ffkHf7uYoIOddUeQayFqsUG7BqUL8jp_C77F5cR3U_7Lt4",
-    'postDate': "2018-04-25 09:15:00"
-  }  
-]
+
+
+
 
 const radar = {
   labels: ['Web Development', 'Data Science', 'Data Engineering', 'Web Design', 'Coding'],
@@ -109,6 +78,45 @@ const twitter = [
   }
 ]
 
+const cscCourses = [
+  {
+    'courseName': 'Data Visualisation Begins with Me',
+    'nextDate': '21 July 2018',
+    'friendsAttended': 'Alan Lim, Tan Jia Hui',
+    'requiredFor': 'Singapore Public Officer working with data or responsible for communication of data'
+  },
+  {
+    'courseName': 'Data Visualisation for Effective Communications',
+    'nextDate': '05 July 2018',
+    'friendsAttended': 'Matthew Yong K M, Teng Teng Ng',
+    'requiredFor': 'Singapore Public officer who is responsible for producing or communicating statistics to your stakeholders'
+  },
+  {
+    'courseName': 'CSC-Coursera Data Analytics Learning Bundle 1: Data Analytics - Basic Principles and Applications',
+    'nextDate': '01 October 2018',
+    'friendsAttended': 'Kang Shian Chin, Jacquelyn Chew',
+    'requiredFor': 'Those who manage a team which needs to use data to improve performance and/or provide insights into service innovation'
+  } 
+]
+
+const skillsFutureCourses = [
+  {
+    'courseName': 'Data Visualization Fundamentals',
+    'nextDate': '22 October 2018',
+    'friendsAttended': 'Leo Deng Yenn, Tan Beng Hock'
+  },
+  {
+    'courseName': 'Collection, Management and Analysis of Quantitative Data',
+    'nextDate': '02 July 2018',
+    'friendsAttended': 'Su Shiyan, Ong JunKai'
+  },
+  {
+    'courseName': 'Building a Data Science Team',
+    'nextDate': '09 July 2018',
+    'friendsAttended': 'Lek Juinn Feng, Alex Lee Yeaw Lip'
+  }
+]
+
 class User extends Component {
   constructor(props) {
     super(props);
@@ -123,8 +131,25 @@ class User extends Component {
     };
   }
 
-  render() {
+  setStateAsync(state) {
+    return new Promise((resolve) => {
+      this.setState(state, resolve)
+    });
+  }
 
+  async componentWillMount() {
+  const url = "data/user_dummy.json";
+  const res = await axios.get(url);
+  const jsonData = await res.data;
+  console.log(jsonData)
+  await this.setStateAsync({data: jsonData});
+  await this.setStateAsync({dataLoaded: true});
+  }
+
+
+  render() {
+    console.log(this.state.data)
+    const topics = this.state.data["topics"]
     return (
       <div className="animated fadeIn">
       
@@ -167,7 +192,7 @@ class User extends Component {
                   <div className="h1 text-muted text-right mb-2">
                   <i className="icon-calendar"></i>
                   </div>
-                  <div className="h4 mb-0" style={{color:"#20a8d8"}}>4</div>
+                  <div className="h4 mb-0" style={{color:"#20a8d8"}}>10</div>
                   <small className="text-muted text-uppercase font-weight-bold">Posts This Month</small>
                 </CardBody>
               </Card>
@@ -181,8 +206,8 @@ class User extends Component {
                   <div className="h1 text-muted text-right mb-2">
                   <i className="icon-user-follow"></i>
                   </div>
-                  <div className="h4 mb-0" style={{color:"#ffc107"}}>10</div>
-                  <small className="text-muted text-uppercase font-weight-bold">Friends Like Her Posts</small>
+                  <div className="h4 mb-0" style={{color:"#ffc107"}}>60</div>
+                  <small className="text-muted text-uppercase font-weight-bold">Friends Liked My Posts</small>
                 </CardBody>
               </Card>
               </Col>
@@ -194,7 +219,7 @@ class User extends Component {
                   <i className="icon-people"></i>
                   </div>
                   <div className="h4 mb-0" style={{color:"#f86c6b"}}>182</div>
-                  <small className="text-muted text-uppercase font-weight-bold">Friends Seen Her Posts</small>
+                  <small className="text-muted text-uppercase font-weight-bold">Friends Seen My Posts</small>
                 </CardBody>
               </Card>
               </Col>
@@ -202,6 +227,63 @@ class User extends Component {
 
           </Col>
         </Row>
+
+        <Row>
+          <Col sm="8">
+              <Card className="fill-card">
+                <CardHeader>
+                  Recommended Civil Service College Courses
+                </CardHeader>
+                <CardBody className="pb-4">
+                  <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                      <thead className="thead-light">
+                      </thead>
+                      <tbody>{cscCourses.map(function(item, key) {
+                        return (
+                            <tr key = {key}>
+                              <td>
+                                <div><b><u>{item.courseName}</u></b></div>
+                                <div><span><b>Next Course Date:</b> {item.nextDate}</span></div>
+                                <div><span><b>Friends Attended:</b> {item.friendsAttended}</span></div>
+                                <div><span><b>Required For:</b> {item.requiredFor}</span></div>
+                              </td>
+                          </tr>
+                          )
+                      })}
+                      </tbody>
+                    </Table>
+                </CardBody>
+              </Card>
+            </Col>
+
+          <Col sm="4">
+              <Card className="fill-card">
+                <CardHeader>
+                  Recommended Skills Future Courses
+                </CardHeader>
+                <CardBody className="pb-4">
+                  <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
+                      <thead className="thead-light">
+                      </thead>
+                      <tbody>{skillsFutureCourses.map(function(item, key) {
+                        return (
+                            <tr key = {key}>
+                              <td>
+                                <div><b><u>{item.courseName}</u></b></div>
+                                <div><span><b>Next Course Date:</b> {item.nextDate}</span></div>
+                                <div><span><b>Friends Attended:</b> {item.friendsAttended}</span></div>
+                              </td>
+                          </tr>
+                          )
+                      })}
+                      </tbody>
+                    </Table>
+                </CardBody>
+              </Card>
+            </Col>
+
+        </Row>
+
 
         <Row>
           <Col sm="8">
