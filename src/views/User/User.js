@@ -130,7 +130,7 @@ class User extends Component {
       
         <Row>
           <Col sm="4">
-            <Widget02 className="profile-card" header="Lynnete Ng Hui Xian" mainText="Head (Tech Office), Digital Hub" pic={ profile } firstPost={ this.state.firstPost } lastPost={ this.state.lastPostedOn }>
+            <Widget02 className="profile-card" header="Lynnete Ng" mainText="Head (Tech Office), Digital Hub" pic={ profile } firstPost={ this.state.firstPost } lastPost={ this.state.lastPostedOn }>
             </Widget02>
           </Col>
 
