@@ -13,7 +13,7 @@ import {
 } from 'reactstrap';
 import Widget02 from '../../views/Widgets/Widget02'
 
-import profile from '../../assets/img/profile/lynnette.jpeg'
+import profile from '../../assets/img/profile/lynnette.png'
 import { NetworkGraph } from '../../assets/data/NetworkGraph.new'
 import axios from 'axios';
 
@@ -81,7 +81,7 @@ class User extends Component {
         
           <Row>
             <Col sm="4">
-              <Widget02 className="profile-card" header="Lynnette Ng" mainText="Head (Tech Office), Digital Hub" pic={ profile } firstPost={ this.state.firstPost } lastPost={ this.state.lastPostedOn }>
+              <Widget02 className="profile-card" header="Daryl Lee" mainText="Head Engineering (Data Analytics)" pic={ profile } firstPost={ this.state.firstPost } lastPost={ this.state.lastPostedOn }>
               </Widget02>
             </Col>
 
