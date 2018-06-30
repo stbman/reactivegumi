@@ -361,9 +361,9 @@
     "top_entities": [
         {
             "total_posts": 23,
-            "unique_string": "Gumi (7 posts), Lynnete Ng Hui Xian (6 posts), Teng Teng Ng (5 posts), Kevin, Yih Liang Koo (3 posts), Tan Kah Siong (2 posts),",
+            "unique_string": "Gumi (7 posts), Lynnete Ng (6 posts), Teng Teng Ng (5 posts), Kevin, Yih Liang Koo (3 posts), Tan Kah Siong (2 posts),",
             "keyword": "ai",
-            "unique_string_2": "Gumi, Lynnete Ng Hui Xian, Teng Teng Ng, Kevin, Yih Liang Koo, Tan Kah Siong,"
+            "unique_string_2": "Gumi, Lynnete Ng, Teng Teng Ng, Kevin, Yih Liang Koo, Tan Kah Siong,"
         },
         {
             "total_posts": 3,
@@ -373,21 +373,21 @@
         },
         {
             "total_posts": 6,
-            "unique_string": "Gumi (3 posts), Lynnete Ng Hui Xian (2 posts), Tan Kah Siong (1 posts),",
+            "unique_string": "Gumi (3 posts), Lynnete Ng (2 posts), Tan Kah Siong (1 posts),",
             "keyword": "machine learning",
-            "unique_string_2": "Gumi, Lynnete Ng Hui Xian, Tan Kah Siong,"
+            "unique_string_2": "Gumi, Lynnete Ng, Tan Kah Siong,"
         },
         {
             "total_posts": 2,
-            "unique_string": "Tan Kah Siong (1 posts), Lynnete Ng Hui Xian (1 posts),",
+            "unique_string": "Tan Kah Siong (1 posts), Lynnete Ng (1 posts),",
             "keyword": "neural networks",
-            "unique_string_2": "Tan Kah Siong, Lynnete Ng Hui Xian,"
+            "unique_string_2": "Tan Kah Siong, Lynnete Ng,"
         },
         {
             "total_posts": 2,
-            "unique_string": "Kevin, Yih Liang Koo (1 posts), Lynnete Ng Hui Xian (1 posts),",
+            "unique_string": "Kevin, Yih Liang Koo (1 posts), Lynnete Ng (1 posts),",
             "keyword": "data science",
-            "unique_string_2": "Kevin, Yih Liang Koo, Lynnete Ng Hui Xian,"
+            "unique_string_2": "Kevin, Yih Liang Koo, Lynnete Ng,"
         }
     ]
 }
