@@ -1,0 +1,415 @@
+{
+    "unique_people": [
+        {
+            "count": 15,
+            "name": "Gumi"
+        },
+        {
+            "count": 10,
+            "name": "Tan Jia Hui"
+        },
+        {
+            "count": 7,
+            "name": "Teng Teng Ng"
+        },
+        {
+            "count": 5,
+            "name": "Tan Kah Siong"
+        },
+        {
+            "count": 5,
+            "name": "Kevin, Yih Liang Koo"
+        },
+        {
+            "count": 1,
+            "name": "Lim Siew Peng Agnes"
+        }
+    ],
+    "readership": [
+        {
+            "readership": 19,
+            "month": 4
+        },
+        {
+            "readership": 16,
+            "month": 5
+        }
+    ],
+    "seen_by": [
+        {
+            "sum": 20,
+            "name": "Lim Siew Peng Agnes",
+            "mean": 20
+        },
+        {
+            "sum": 101,
+            "name": "Tan Kah Siong",
+            "mean": 20
+        },
+        {
+            "sum": 182,
+            "name": "Tan Jia Hui",
+            "mean": 18
+        },
+        {
+            "sum": 89,
+            "name": "Kevin, Yih Liang Koo",
+            "mean": 17
+        },
+        {
+            "sum": 123,
+            "name": "Teng Teng Ng",
+            "mean": 17
+        },
+        {
+            "sum": 242,
+            "name": "Gumi",
+            "mean": 16
+        }
+    ],
+    "entities": [
+        {
+            "keywords": "nan nvidia ’s researcher,simple task,human,robot",
+            "content": "nan Nvidia’s researchers teach a robot to perform simple tasks by observing a human",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/214421739175265/",
+            "timestamp": "2018-05-23 12:00:00"
+        },
+        {
+            "keywords": "dr. angelica lim,deep neural network,google brain researcher anelia angelova,excellent tutorial,icra2018,twitter,robotic",
+            "content": "Dr. Angelica Lim: Excellent tutorial on applying deep neural networks to robotics by Google Brain researcher Anelia Angelova #ICRA2018 https://t.co/Ar10WBxTLO Dr. Angelica Lim on Twitter",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/214107435873362/",
+            "timestamp": "2018-05-22 10:18:00"
+        },
+        {
+            "keywords": "monitoring employees emotions,nan company,ai,china",
+            "content": "nan Companies In China Are Monitoring Employees Emotions With AI",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/214073295876776/",
+            "timestamp": "2018-05-22 06:44:00"
+        },
+        {
+            "keywords": "health care,ai application,nan",
+            "content": "nan 10 Promising AI Applications in Health Care",
+            "profile_name": "Teng Teng Ng",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/213849442565828/",
+            "timestamp": "2018-05-21 18:14:00"
+        },
+        {
+            "keywords": "online ai course,nan finnish university,open",
+            "content": "nan Finnish university's online AI course is open to everyone",
+            "profile_name": "Teng Teng Ng",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/213849079232531/",
+            "timestamp": "2018-05-21 18:12:00"
+        },
+        {
+            "keywords": "semantic textual similarity,nan",
+            "content": "nan Advances in Semantic Textual Similarity",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/213715285912577/",
+            "timestamp": "2018-05-21 07:14:00"
+        },
+        {
+            "keywords": "nan potential spy devices,dmv,phones",
+            "content": "nan Potential Spy Devices Which Track Phones Found All Over DMV",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/213440862606686/",
+            "timestamp": "2018-05-20 07:21:00"
+        },
+        {
+            "keywords": "image classification,nan basics,heartbeat,pytorch",
+            "content": "nan Basics of Image Classification with PyTorch – Heartbeat",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/213163669301072/",
+            "timestamp": "2018-05-19 07:25:00"
+        },
+        {
+            "keywords": "device ml models,chip vendor,speed issue,android phone,accuracy,dsp,interesting,sdk,reliance,gpu",
+            "content": "We've experimented loading pre-trained models on android phones, performing inferences on their CPUs, and attempted to do the same on their GPUs/DSPs. The former suffers from accuracy/speed issues while the latter has over reliance on chip vendors' SDK. It would be interesting to try learn2compress soon and see where it lands in the above scale. Custom On-Device ML Models with Learn2Compress",
+            "profile_name": "Tan Kah Siong",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/212972472653525/",
+            "timestamp": "2018-05-18 15:24:00"
+        },
+        {
+            "keywords": "nan google ’s selfish ledger,silicon valley social engineering,unsettling vision",
+            "content": "nan Google’s Selfish Ledger is an unsettling vision of Silicon Valley social engineering",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/212900765994029/",
+            "timestamp": "2018-05-18 07:51:00"
+        },
+        {
+            "keywords": "art image recognition,deep learning,state,hashtag,nan",
+            "content": "nan Advancing state-of-the-art image recognition with deep learning on hashtags",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/212627226021383/",
+            "timestamp": "2018-05-17 07:05:00"
+        },
+        {
+            "keywords": "nan enterprise startup,israel worth,zdnet",
+            "content": "nan Enterprise startups in Israel worth getting to know | ZDNet",
+            "profile_name": "Teng Teng Ng",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/212481896035916/",
+            "timestamp": "2018-05-16 19:31:00"
+        },
+        {
+            "keywords": "behavioral signals’,nan twitter,conversation,troll",
+            "content": "nan Twitter is now using ‘behavioral signals’ to mute trolls in conversations and search",
+            "profile_name": "Teng Teng Ng",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/212481416035964/",
+            "timestamp": "2018-05-16 19:28:00"
+        },
+        {
+            "keywords": "nan att&ck™ content available,public taxii™,server,stix™",
+            "content": "nan ATT&CK™ content available in STIX™ 2.0 via public TAXII™ 2.0 server",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/212464832704289/",
+            "timestamp": "2018-05-16 18:04:00"
+        },
+        {
+            "keywords": "machinelearning kernelml generalized machine learning algorithm,kernel machine learning,ai,kdnugget",
+            "content": "KDnuggets: Kernel #MachineLearning KernelML Generalized Machine Learning Algorithm https://t.co/GRQXaiBS03 https://t.co/fanT4A5H17 #ai #ml #machinelearning Kernel Machine Learning — KernelML — Generalized Machine Learning Algorithm",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/212154522735320/",
+            "timestamp": "2018-05-15 13:02:00"
+        },
+        {
+            "keywords": "andrew ng,modern ais limitation,great ai technology,eyed recognition,car,clear,indus,twitter,self",
+            "content": "Andrew Ng: Self-driving cars need great AI technology, but also a clear-eyed recognition of modern AIs limitations. The indus https://t.co/LhdUXnGKOO #ai#selfdriving Andrew Ng on Twitter",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/212144229403016/",
+            "timestamp": "2018-05-15 11:47:00"
+        },
+        {
+            "keywords": "",
+            "content": "nan Shattering AI Performance Records",
+            "profile_name": "Kevin, Yih Liang Koo",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/211278486156257/",
+            "timestamp": "2018-05-12 12:08:00"
+        },
+        {
+            "keywords": "nan google announces,faster tpu,machine learning,extremetech,ai",
+            "content": "nan Google Announces 8x Faster TPU 3.0 For AI, Machine Learning - ExtremeTech",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/211090672841705/",
+            "timestamp": "2018-05-11 22:29:00"
+        },
+        {
+            "keywords": "digital ai helper,voice assistant,assistant,voice,stunning demo,idea,person,end,natural,actual phone",
+            "content": "The future of voice assistants: The voice sounded incredibly natural; the person on the other end had no idea they were talking to a digital AI helper. Google just gave a stunning demo of Assistant making an actual phone call",
+            "profile_name": "Teng Teng Ng",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/210517576232348/",
+            "timestamp": "2018-05-09 21:13:00"
+        },
+        {
+            "keywords": "nan facebook ’s field guide,machine learning video series",
+            "content": "nan Facebook’s Field Guide to Machine Learning video series",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/210353426248763/",
+            "timestamp": "2018-05-09 07:09:00"
+        },
+        {
+            "keywords": "global ai race,school kid,nan china",
+            "content": "nan China looks to school kids to win the global AI race",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/210147636269342/",
+            "timestamp": "2018-05-08 13:52:00"
+        },
+        {
+            "keywords": "open images challenge,visual relationship detection,open images v4,object detection,object,recognition,bag,lack,eccv,step",
+            "content": "The 'Visual Relationship Detection' challenge is one of the next steps beyond object detection and recognition. Finding relationships between objects in the image, or the lack of (abandoned bags?). Announcing Open Images V4 and the ECCV 2018 Open Images Challenge",
+            "profile_name": "Tan Kah Siong",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/209423559675083/",
+            "timestamp": "2018-05-05 21:17:00"
+        },
+        {
+            "keywords": "image recognition ai,instagram photo,nan facebook",
+            "content": "nan Facebook is using your Instagram photos to train its image recognition AI",
+            "profile_name": "Teng Teng Ng",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/208734179744021/",
+            "timestamp": "2018-05-03 09:12:00"
+        },
+        {
+            "keywords": "eugene ang phuay wee,ling evan,high schooler,smartlens’ app,purpose visual search,step",
+            "content": "Ling Evan and Eugene Ang Phuay Wee We can try this out. ‘SmartLens’ app created by a high schooler is a step towards all-purpose visual search",
+            "profile_name": "Kevin, Yih Liang Koo",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/208503273100445/",
+            "timestamp": "2018-05-02 13:04:00"
+        },
+        {
+            "keywords": "ai network uk,artificial intelligence,drive,£",
+            "content": "Growing AI network UK announces £1b drive into artificial intelligence",
+            "profile_name": "Tan Jia Hui",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/207113846572721/",
+            "timestamp": "2018-04-27 09:15:00"
+        },
+        {
+            "keywords": "repair damaged photos,ai imaging technique,nvidia",
+            "content": "https://beebom.com/nvidia-feature-repair-images/ Nvidia's AI Imaging Technique Can Repair Damaged Photos Realistically",
+            "profile_name": "Tan Jia Hui",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/206574073293365/",
+            "timestamp": "2018-04-25 09:15:00"
+        },
+        {
+            "keywords": "known player,ai,horizon robotics,ai startup,evident,edge,sensetime,thank,impact,camera",
+            "content": "Qualcomm's impact on AI at the edge is evident in embedded AI startups such as Horizon Robotics, and well known players such as Sensetime. Thanks to AI, These Cameras Will Know What They’re Seeing",
+            "profile_name": "Tan Kah Siong",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/205726906711415/",
+            "timestamp": "2018-04-22 10:06:00"
+        },
+        {
+            "keywords": "fourth dimension,industry ’s,new cap,analytic,teradata",
+            "content": "How is this a new cap? Teradata Launches Industry’s First 4D Analytics. What Is This Fourth Dimension?",
+            "profile_name": "Tan Jia Hui",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/205259473424825/",
+            "timestamp": "2018-04-20 18:13:00"
+        },
+        {
+            "keywords": "oxford,ai,emiratis,mou",
+            "content": "http://www.arabianbusiness.com/…/394194-mou-signed-to-train… MoU signed to train Emiratis in AI at Oxford",
+            "profile_name": "Tan Jia Hui",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/204752620142177/",
+            "timestamp": "2018-04-19 08:20:00"
+        },
+        {
+            "keywords": "perfect ai voice,pursuit",
+            "content": "In pursuit of the perfect AI voice In pursuit of the perfect AI voice",
+            "profile_name": "Tan Jia Hui",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/204749746809131/",
+            "timestamp": "2018-04-19 08:05:00"
+        },
+        {
+            "keywords": "app wrappup,ai note,nan voicera",
+            "content": "nan Voicera scoops up AI note-taking app Wrappup",
+            "profile_name": "Kevin, Yih Liang Koo",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/204783796805726/",
+            "timestamp": "2018-04-18 22:37:00"
+        },
+        {
+            "keywords": "generative adversarial networks,possible reasoning,ai interpretable,complex model,easy,logical,implementation,approach,decision",
+            "content": "This doesn't help to directly explain decisions made by complex models, but offers another approach to define the possible reasonings. The implementation is surprisingly logical and easy to understand. Making AI Interpretable with Generative Adversarial Networks",
+            "profile_name": "Tan Kah Siong",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/204343393516433/",
+            "timestamp": "2018-04-17 09:28:00"
+        },
+        {
+            "keywords": "deep learning,machine learning,ai,arxiv.org,march,insidebigdata,good",
+            "content": "https://insidebigdata.com/…/best-arxiv-org-ai-machine-lear…/ Best of arXiv.org for AI, Machine Learning, and Deep Learning – March 2018 - insideBIGDATA",
+            "profile_name": "Tan Jia Hui",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/203845496899556/",
+            "timestamp": "2018-04-15 11:41:00"
+        },
+        {
+            "keywords": "facial recognition ai,crowd chinese authority,jacky cheung,thank,fugitive,hiding",
+            "content": "When you are in hiding but also like jacky cheung. No more getting lost in the crowd Chinese authorities nab fugitive in a crowd of 50k thanks to facial recognition AI",
+            "profile_name": "Tan Jia Hui",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/203577596926346/",
+            "timestamp": "2018-04-14 10:28:00"
+        },
+        {
+            "keywords": "privacy fear,facial,facial recognition,singapore,recognition-,lamppost,test",
+            "content": "http://www.asiaone.com/…/singapore-test-facial-recognition-… Singapore to test facial recognition on lampposts, stoking privacy fears",
+            "profile_name": "Tan Jia Hui",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/203578526926253/",
+            "timestamp": "2018-04-14 11:20:00"
+        },
+        {
+            "keywords": "dual use nature,ai researcher,ai,people,good",
+            "content": "Good read about the dual use nature of AI. Should AI researchers kill people?",
+            "profile_name": "Kevin, Yih Liang Koo",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/202893696994736/",
+            "timestamp": "2018-04-11 15:58:00"
+        },
+        {
+            "keywords": "mobile ux design trends,user,ux planet,frontend",
+            "content": "Something more frontend for our users: 12 Mobile UX Design Trends For 2018 – UX Planet",
+            "profile_name": "Lim Siew Peng Agnes",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/202543383696434/",
+            "timestamp": "2018-04-10 07:18:00"
+        },
+        {
+            "keywords": "intelligence augmentation ai mit,new headset,head’,word",
+            "content": "Intelligence augmentation AI MIT’s new headset reads the ‘words in your head’",
+            "profile_name": "Kevin, Yih Liang Koo",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/202143667069739/",
+            "timestamp": "2018-04-08 20:28:00"
+        },
+        {
+            "keywords": "machine learning,machine learning tools,data volume,data,quality,bias,tricky,bad,useless,challenge",
+            "content": "We couldn't emphasise more on the challenges of data volume and quality when it comes to machine learning. Among them, biases can be the most tricky to deal with. If Your Data Is Bad, Your Machine Learning Tools Are Useless",
+            "profile_name": "Tan Kah Siong",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/196421854308587/",
+            "timestamp": "2018-04-06 01:15:00"
+        },
+        {
+            "keywords": "cybersecurity startup,new hub,singtel innov8,nus enterprise,blk,opengovasia,happening",
+            "content": "More happenings in Blk 71 NUS Enterprise and Singtel Innov8 launch new hub for cybersecurity startups | OpenGovAsia",
+            "profile_name": "Tan Jia Hui",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/193474811269958/",
+            "timestamp": "2018-04-03 23:46:00"
+        },
+        {
+            "keywords": "ai what facebook ’s data scandal,privacy regulation,europeans,development,chinese,regulator,americans",
+            "content": "How the Americans, Chinese and Europeans are managing privacy regulations with the development of AI What Facebook’s Data Scandal Really Means for Regulators",
+            "profile_name": "Teng Teng Ng",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/192499954700777/",
+            "timestamp": "2018-04-03 13:27:00"
+        },
+        {
+            "keywords": "construction?engineering.com,essential,drones",
+            "content": "Drones are going into construction Are Drones Becoming Essential to Construction?Engineering.com",
+            "profile_name": "Gumi",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/191093421508097/",
+            "timestamp": "2018-04-02 13:45:00"
+        },
+        {
+            "keywords": "machine learningbooking.com,kubernetes,machine-",
+            "content": "https://www.infoq.com/…/2018/04/booking-kubernetes-machine-… How Booking.com Uses Kubernetes for Machine LearningBooking.com",
+            "profile_name": "Tan Jia Hui",
+            "link": "https://onepublicservice.facebook.com/groups/102523307031776/permalink/191052874845485/",
+            "timestamp": "2018-04-02 08:54:00"
+        }
+    ],
+    "posts_by_month": [
+        {
+            "posts_per_month": 24,
+            "month": 5
+        },
+        {
+            "posts_per_month": 19,
+            "month": 4
+        }
+    ],
+    "likes": [
+        {
+            "sum": 2,
+            "name": "Lim Siew Peng Agnes",
+            "mean": 2
+        },
+        {
+            "sum": 6,
+            "name": "Tan Kah Siong",
+            "mean": 1
+        },
+        {
+            "sum": 4,
+            "name": "Gumi",
+            "mean": 0
+        },
+        {
+            "sum": 0,
+            "name": "Kevin, Yih Liang Koo",
+            "mean": 0
+        },
+        {
+            "sum": 8,
+            "name": "Tan Jia Hui",
+            "mean": 0
+        },
+        {
+            "sum": 5,
+            "name": "Teng Teng Ng",
+            "mean": 0
+        }
+    ]
+}

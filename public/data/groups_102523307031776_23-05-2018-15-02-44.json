@@ -1,0 +1,246 @@
+{
+    "unique_people": [
+        {
+            "count": 15,
+            "name": "Gumi",
+            "last_post_content": "Nvidia’s researchers teach a robot to perform simple tasks by observing a human",
+            "entities": "ai, twitter, robotdr. angelica lim, kernel machine learning, modern ais limitation",
+            "last_post": "2018-05-23 12:00:00",
+            "first_post": "2018-04-02 13:45:00",
+            "last_post_link": "https://techcrunch.com/2018/05/20/nvidias-researchers-teach-a-robot-to-learn-simple-tasks-by-observing-a-human/"
+        },
+        {
+            "count": 10,
+            "name": "Tan Jia Hui",
+            "last_post_content": "UK announces £1b drive into artificial intelligence",
+            "entities": "ai, industry ’s, mouperfect ai voice, nus enterprise, ai imaging technique",
+            "last_post": "2018-04-27 09:15:00",
+            "first_post": "2018-04-02 08:54:00",
+            "last_post_link": "https%3A%2F%2Fwww.businesstimes.com.sg%2Fgovernment-economy%2Fuk-announces-%C2%A31b-drive-into-artificial-intelligence&h=ATP4bL2ixfvEBGwBq72MPeLLoQiOKg_3eHfNCPt1D4-GurgJqHIpAkfIuu_2XiZK2igSIp1tEBKYarO9eZA5rlnDqnRRLGzUBl-GbughSCZ5qQUx2iEOpa9b0jBMn7Xa84xDMVk"
+        },
+        {
+            "count": 7,
+            "name": "Teng Teng Ng",
+            "last_post_content": "10 Promising AI Applications in Health Care",
+            "entities": "finnish university, chinese, enterprise startup, idea, health care",
+            "last_post": "2018-05-21 18:14:00",
+            "first_post": "2018-04-03 13:27:00",
+            "last_post_link": "https%3A%2F%2Fhbr.org%2F2018%2F05%2F10-promising-ai-applications-in-health-care&h=ATP658gRU-nKKvoOifwFnvPYjUniqsT3xlXS7LEr97srfTidy0JAakkgGGWbT9Q-9FnB45NOmkJfh7Xshnc7L_ijGQQ7hawNdWDIfdOWY3aq1wwpTcWGFcYLyI-GmLyvTe1XOL8"
+        },
+        {
+            "count": 5,
+            "name": "Tan Kah Siong",
+            "last_post_content": "Custom On-Device ML Models with Learn2Compress",
+            "entities": "device ml models, data volume, ai, lack, sensetime",
+            "last_post": "2018-05-18 15:24:00",
+            "first_post": "2018-04-06 01:15:00",
+            "last_post_link": "http%3A%2F%2Fai.googleblog.com%2F2018%2F05%2Fcustom-on-device-ml-models.html&h=ATNpBOMvns8-ZLUSp3vPm6K1Tb2v0ewQXPmQ_D0D0o8ZDKQ7ommu3nqoqjhB57mE1Pl3W1m811eZvtfnDLyoxALwT4UIySfzvDubfP1FKY5t6CkJhRLQHfxJLL7nW2WAkCc5DV4"
+        },
+        {
+            "count": 5,
+            "name": "Kevin, Yih Liang Koo",
+            "last_post_content": "Shattering AI Performance Records",
+            "entities": "word, ling evan, eugene ang phuay wee, ai, voiceradual use nature",
+            "last_post": "2018-05-12 12:08:00",
+            "first_post": "2018-04-08 20:28:00",
+            "last_post_link": "https%3A%2F%2Fwww.slideshare.net%2Fmobile%2FNVIDIA%2Fshattering-ai-performance-records&h=ATMaaW8TxxOqGS2JDfqy_N3_dsdVxJV-EZ4ocNuREEIQHExZaxBxlJM-bi-w86L01A7wbvoMHhDPJH2rPTQ5RfhaaXUppjj-pVirXvujqdooOyH5tiBU42Z_Nku1zc4aUPGMrpA"
+        },
+        {
+            "count": 1,
+            "name": "Lim Siew Peng Agnes",
+            "last_post_content": "12 Mobile UX Design Trends For 2018 – UX Planet",
+            "entities": "mobile ux design trends, ux planet, frontend, user",
+            "last_post": "2018-04-10 07:18:00",
+            "first_post": "2018-04-10 07:18:00",
+            "last_post_link": "https%3A%2F%2Fuxplanet.org%2F12-mobile-ux-design-trends-for-2018-5b4ce7e8445f&h=ATNjQYteNvr7Q0nMJorn7KmVISATtWw2jEZoFDSfiYGtyzFK_mqAgy_mql-1oQnYIZEfeB8EUOEXasm-sXp653tnZIpZzHoZzY6qKWtxQQzsQoNgO-LJL39DhNTWFtBZWftMrVk"
+        }
+    ],
+    "readership": [
+        {
+            "readership": 19,
+            "month": 4
+        },
+        {
+            "readership": 16,
+            "month": 5
+        }
+    ],
+    "data_details": {
+        "earliest_post": "2018-04-02 08:54",
+        "filename": "groups_102523307031776_23-05-2018-15-02-44.tsv",
+        "latest_post": "2018-05-23 12:00",
+        "time_data_generated": "23-05-2018-15-02-44"
+    },
+    "seen_by": [
+        {
+            "post_time": "2018-04-10 07:18:00",
+            "name": "Lim Siew Peng Agnes",
+            "sum": 20,
+            "seen_by_max": 20,
+            "seen_by_link": "https://onepublicservice.facebook.com/ufi/group/seenby/profile/browser/?id=202543383696434&av=100025053994973",
+            "content": "Something more frontend for our users: 12 Mobile UX Design Trends For 2018 – UX Planet",
+            "entities": "mobile ux design trends, ux planet, frontend, user",
+            "link": "https%3A%2F%2Fuxplanet.org%2F12-mobile-ux-design-trends-for-2018-5b4ce7e8445f&h=ATNjQYteNvr7Q0nMJorn7KmVISATtWw2jEZoFDSfiYGtyzFK_mqAgy_mql-1oQnYIZEfeB8EUOEXasm-sXp653tnZIpZzHoZzY6qKWtxQQzsQoNgO-LJL39DhNTWFtBZWftMrVk",
+            "mean": 20
+        },
+        {
+            "post_time": "2018-04-17 09:28:00",
+            "name": "Tan Kah Siong",
+            "sum": 101,
+            "seen_by_max": 24,
+            "seen_by_link": "https://onepublicservice.facebook.com/ufi/group/seenby/profile/browser/?id=204343393516433&av=100025053994973",
+            "content": "This doesn't help to directly explain decisions made by complex models, but offers another approach to define the possible reasonings. The implementation is surprisingly logical and easy to understand. Making AI Interpretable with Generative Adversarial Networks",
+            "entities": "device ml models, data volume, ai, lack, sensetime",
+            "link": "https%3A%2F%2Fmedium.com%2Fsquare-corner-blog%2Fmaking-ai-interpretable-with-generative-adversarial-networks-766abc953edf&h=ATOi8QCez8WTlyEbaD07iQBYrjTBNY2CFXntqjEXZBvSJbX700gRq3Kpk2dXRPQeitu4TYXuTywiPW3Mvu8MtrVcUEpyCczwoGVHnvwjAMgyjDB3UELFVMvNJdzhEP669bLhUGA",
+            "mean": 20
+        },
+        {
+            "post_time": "2018-04-14 10:28:00",
+            "name": "Tan Jia Hui",
+            "sum": 182,
+            "seen_by_max": 22,
+            "seen_by_link": "https://onepublicservice.facebook.com/ufi/group/seenby/profile/browser/?id=203577596926346&av=100025053994973",
+            "content": "When you are in hiding but also like jacky cheung. No more getting lost in the crowd Chinese authorities nab fugitive in a crowd of 50k thanks to facial recognition AI",
+            "entities": "ai, industry ’s, mouperfect ai voice, nus enterprise, ai imaging technique",
+            "link": "https%3A%2F%2Fthenextweb.com%2Fartificial-intelligence%2F2018%2F04%2F12%2Fchinese-authorities-nab-fugitive-in-a-crowd-of-50k-thanks-to-facial-recognition-ai%2F&h=ATPwqODUj_CXgNFjvZRrMtrkFb3MVPXGBFhe91UXGMv0TVhl6eruZEmqRVJ7-bduDhLcpU8YIf458QcjEGcpVi2C0MQEcXKqCVLu7aKpMasvN4O93oZIxSAaqStm5lC1AZgYWck",
+            "mean": 18
+        },
+        {
+            "post_time": "2018-04-08 20:28:00",
+            "name": "Kevin, Yih Liang Koo",
+            "sum": 89,
+            "seen_by_max": 19,
+            "seen_by_link": "https://onepublicservice.facebook.com/ufi/group/seenby/profile/browser/?id=202143667069739&av=100025053994973",
+            "content": "Intelligence augmentation AI MIT’s new headset reads the ‘words in your head’",
+            "entities": "word, ling evan, eugene ang phuay wee, ai, voiceradual use nature",
+            "link": "https%3A%2F%2Ftechcrunch.com%2F2018%2F04%2F06%2Fmits-new-headset-reads-the-words-in-your-head%2F&h=ATPSGli_SeH4c1LWR-PMCJ37OlOJLy5pPLSrxy20Vv9Ah4EcUWPL_ccizlEX-gvobyThPV6-i1jQstsgjABRK-rmRoubmtVi4t3GP_nSZXYWAXHby9fIuZDg6z4W82DCkAvA7bQ",
+            "mean": 17
+        },
+        {
+            "post_time": "2018-04-03 13:27:00",
+            "name": "Teng Teng Ng",
+            "sum": 123,
+            "seen_by_max": 24,
+            "seen_by_link": "https://onepublicservice.facebook.com/ufi/group/seenby/profile/browser/?id=192499954700777&av=100025053994973",
+            "content": "How the Americans, Chinese and Europeans are managing privacy regulations with the development of AI What Facebook’s Data Scandal Really Means for Regulators",
+            "entities": "finnish university, chinese, enterprise startup, idea, health care",
+            "link": "https%3A%2F%2Fwww.bloomberg.com%2Fnews%2Farticles%2F2018-04-02%2Fwhat-facebook-s-data-scandal-really-means-for-regulators&h=ATOF4sw6M-HFaUHLF9t1FHEsOkt9JmI7bP3GCeGmh6shDGRkzDyVR-gx5FuXFWeevTzV5e38fXDH6AREKCsde0NFkhiUKBJD4FecgpZkDU6LCOufz_-sKTe3y0N8fmJAOSgPh5g",
+            "mean": 17
+        },
+        {
+            "post_time": "2018-04-02 13:45:00",
+            "name": "Gumi",
+            "sum": 242,
+            "seen_by_max": 21,
+            "seen_by_link": "https://onepublicservice.facebook.com/ufi/group/seenby/profile/browser/?id=191093421508097&av=100025053994973",
+            "content": "Drones are going into construction Are Drones Becoming Essential to Construction?Engineering.com",
+            "entities": "ai, twitter, robotdr. angelica lim, kernel machine learning, modern ais limitation",
+            "link": "https%3A%2F%2Fwww.engineering.com%2FBIM%2FArticleID%2F16686%2FAre-Drones-Becoming-Essential-to-Construction.aspx&h=ATOGFlZuXmcMr-Pqs1eKUXx7a8VHYD18Wn6qZ5QasaJLOueNt640_n8LXIee5iV09kfOnzsvdZXwF_gykLGFqtyGV1N5h7KWpmoTAXPWuhsdjHbNeuw7I2UcSPi61k432jab0z4",
+            "mean": 16
+        }
+    ],
+    "posts_by_month": [
+        {
+            "posts_per_month": 24,
+            "month": 5
+        },
+        {
+            "posts_per_month": 19,
+            "month": 4
+        }
+    ],
+    "likes": [
+        {
+            "post_time": "2018-04-10 07:18:00",
+            "name": "Lim Siew Peng Agnes",
+            "sum": 2,
+            "content": "Something more frontend for our users: 12 Mobile UX Design Trends For 2018 – UX Planet",
+            "entities": "mobile ux design trends, ux planet, frontend, user",
+            "likes_max": 2,
+            "link": "https%3A%2F%2Fuxplanet.org%2F12-mobile-ux-design-trends-for-2018-5b4ce7e8445f&h=ATNjQYteNvr7Q0nMJorn7KmVISATtWw2jEZoFDSfiYGtyzFK_mqAgy_mql-1oQnYIZEfeB8EUOEXasm-sXp653tnZIpZzHoZzY6qKWtxQQzsQoNgO-LJL39DhNTWFtBZWftMrVk",
+            "mean": 2
+        },
+        {
+            "post_time": "2018-05-18 15:24:00",
+            "name": "Tan Kah Siong",
+            "sum": 6,
+            "content": "We've experimented loading pre-trained models on android phones, performing inferences on their CPUs, and attempted to do the same on their GPUs/DSPs. The former suffers from accuracy/speed issues while the latter has over reliance on chip vendors' SDK. It would be interesting to try learn2compress soon and see where it lands in the above scale. Custom On-Device ML Models with Learn2Compress",
+            "entities": "device ml models, data volume, ai, lack, sensetime",
+            "likes_max": 3,
+            "link": "http%3A%2F%2Fai.googleblog.com%2F2018%2F05%2Fcustom-on-device-ml-models.html&h=ATNpBOMvns8-ZLUSp3vPm6K1Tb2v0ewQXPmQ_D0D0o8ZDKQ7ommu3nqoqjhB57mE1Pl3W1m811eZvtfnDLyoxALwT4UIySfzvDubfP1FKY5t6CkJhRLQHfxJLL7nW2WAkCc5DV4",
+            "mean": 1
+        },
+        {
+            "post_time": "2018-05-11 22:29:00",
+            "name": "Gumi",
+            "sum": 4,
+            "content": " Google Announces 8x Faster TPU 3.0 For AI, Machine Learning - ExtremeTech",
+            "entities": "ai, twitter, robotdr. angelica lim, kernel machine learning, modern ais limitation",
+            "likes_max": 2,
+            "link": "https%3A%2F%2Fwww.extremetech.com%2Fextreme%2F269008-google-announces-8x-faster-tpu-3-0-for-ai-machine-learning&h=ATPn3-EX8fbCDtLLG92v-9C5CH98aRJLLbtkoCcY8SW9gPnqjw2MYBf_nv5Bq-U0nAt8EOe2aPRWZMkdIh3p1X2HY64wjX7phyatXmYdgOavjGrjYXP4e4O3GEDg1Zu4imHh5jo",
+            "mean": 0
+        },
+        {
+            "post_time": "2018-05-12 12:08:00",
+            "name": "Kevin, Yih Liang Koo",
+            "sum": 0,
+            "content": " Shattering AI Performance Records",
+            "entities": "word, ling evan, eugene ang phuay wee, ai, voiceradual use nature",
+            "likes_max": 0,
+            "link": "https%3A%2F%2Fwww.slideshare.net%2Fmobile%2FNVIDIA%2Fshattering-ai-performance-records&h=ATMaaW8TxxOqGS2JDfqy_N3_dsdVxJV-EZ4ocNuREEIQHExZaxBxlJM-bi-w86L01A7wbvoMHhDPJH2rPTQ5RfhaaXUppjj-pVirXvujqdooOyH5tiBU42Z_Nku1zc4aUPGMrpA",
+            "mean": 0
+        },
+        {
+            "post_time": "2018-04-25 09:15:00",
+            "name": "Tan Jia Hui",
+            "sum": 8,
+            "content": "https://beebom.com/nvidia-feature-repair-images/ Nvidia's AI Imaging Technique Can Repair Damaged Photos Realistically",
+            "entities": "ai, industry ’s, mouperfect ai voice, nus enterprise, ai imaging technique",
+            "likes_max": 2,
+            "link": "https%3A%2F%2Fbeebom.com%2Fnvidia-feature-repair-images%2F&h=ATND9K2Pusn5l0grvny39IyNOsDz9xbxSHII4_jW84Rou7DXxFYKvtsaMj_r2NMiIHDIzojZI8YDNXZrikWVprXG8ffkHf7uYoIOddUeQayFqsUG7BqUL8jp_C77F5cR3U_7Lt4",
+            "mean": 0
+        },
+        {
+            "post_time": "2018-05-09 21:13:00",
+            "name": "Teng Teng Ng",
+            "sum": 5,
+            "content": "The future of voice assistants: The voice sounded incredibly natural; the person on the other end had no idea they were talking to a digital AI helper. Google just gave a stunning demo of Assistant making an actual phone call",
+            "entities": "finnish university, chinese, enterprise startup, idea, health care",
+            "likes_max": 2,
+            "link": "https%3A%2F%2Fwww.theverge.com%2Fplatform%2Famp%2F2018%2F5%2F8%2F17332070%2Fgoogle-assistant-makes-phone-call-demo-duplex-io-2018&h=ATMdEDJkOKtKEqScmgzvtzHUg2KWkL6DGsobSBG6Ui9hJMD5AP0MKbe3mpZXUIr1-WdqldxCuE5nBBDArVZC98PuHp8EDEXHqx8CJXdf4I7RMoMWs_jJtBizYy986dInLuT4Vng",
+            "mean": 0
+        }
+    ],
+    "top_entities": [
+        {
+            "total_posts": 23,
+            "unique_string": "Gumi (7 posts), Tan Jia Hui (6 posts), Teng Teng Ng (5 posts), Kevin, Yih Liang Koo (3 posts), Tan Kah Siong (2 posts),",
+            "keyword": "ai",
+            "unique_string_2": "Gumi, Tan Jia Hui, Teng Teng Ng, Kevin, Yih Liang Koo, Tan Kah Siong,"
+        },
+        {
+            "total_posts": 3,
+            "unique_string": "Gumi (2 posts), Teng Teng Ng (1 posts),",
+            "keyword": "twitter",
+            "unique_string_2": "Gumi, Teng Teng Ng,"
+        },
+        {
+            "total_posts": 6,
+            "unique_string": "Gumi (3 posts), Tan Jia Hui (2 posts), Tan Kah Siong (1 posts),",
+            "keyword": "machine learning",
+            "unique_string_2": "Gumi, Tan Jia Hui, Tan Kah Siong,"
+        },
+        {
+            "total_posts": 2,
+            "unique_string": "Tan Kah Siong (1 posts), Tan Jia Hui (1 posts),",
+            "keyword": "neural networks",
+            "unique_string_2": "Tan Kah Siong, Tan Jia Hui,"
+        },
+        {
+            "total_posts": 2,
+            "unique_string": "Kevin, Yih Liang Koo (1 posts), Tan Jia Hui (1 posts),",
+            "keyword": "good",
+            "unique_string_2": "Kevin, Yih Liang Koo, Tan Jia Hui,"
+        }
+    ]
+}
