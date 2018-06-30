@@ -31,7 +31,7 @@ class App extends Component {
           <Route exact path="/404" name="Page 404" component={Page404} />
           <Route exact path="/500" name="Page 500" component={Page500} />
           <Route path="/" name="Home" component={DefaultLayout} />
-          <Route path="/user/jiahui" name="User" component={User} />
+          <Route path="/user/lynnetteng" name="User" component={User} />
         </Switch>
       </HashRouter>
     );

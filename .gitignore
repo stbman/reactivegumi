@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # data
-public/data/
+#public/data/
 data_processing/fbot
 data_processing/venv
 data_processing/processed
@@ -32,5 +32,5 @@ data_processing/*.tsv
 # vscode settings
 .vscode/
 
-src/assets/img/profile
-src/assets/data
+#src/assets/img/profile
+#src/assets/data
