@@ -1,6 +1,6 @@
 var fs = require('fs')
 var json_db = JSON.parse(fs.readFileSync('../assets/data/user_dummy.json', 'utf8'));
-
+var id_map = JSON.parse(fs.readFileSync('../assets/data/id.json', 'utf8'));
 
 
 const Telegraf = require('telegraf')
@@ -17,39 +17,59 @@ const keyboard = Markup.inlineKeyboard([
 
 // on start up 		
 bot.start((ctx) => ctx.reply('Digital Twin Learning Bot!'))
-bot.help((ctx) => ctx.reply('Help message'))
 
 //media splash 
 bot.command('/info', (ctx) => { ctx.replyWithMediaGroup([
 {
   'media': {source: '../assets/img/csc_logo.png'},
-  'caption': 'Civil Service College Learning Bot 😃\n type /help for list of commands ',
+  'caption': 'Civil Service College Learning Bot 😃',
   'type': 'photo'
-}]) })
-
-
-bot.help((ctx) => ctx.reply('Send me a sticker'))
-
-// daily digest
-bot.hears('mydaily', (ctx)=> ctx.reply(JSON.stringify(json_db['topics'])))
-// quick review
-bot.hears('review', (ctx)=> {
-	console.log(ctx.chat.id)
-	ctx.reply(ctx.chat.id)
+}]) 
+ctx.reply(
+  'reply with the following keywords\n'+ 
+  'daily : your daily topics feed\n'+
+  'learn : current course recommendation\n'+
+  'guru  : experts in your area\n'+ 
+  'help  : for full list of commands')
 })
 
+//bot.help((ctx) => ctx.reply('Send me a sticker'))
+
+
+// daily digest
+function daily_func(id, db) {
+
+	return out_str
+}
+const daily_regex = new RegExp('[Dd]aily')
+bot.hears(daily_regex, (ctx)=> ctx.reply(daily_func(id_map[ctx.chat.id], json_db)))
+
+// quick review
+function learn_func(ctx, db) {
+
+	return out_str
+}
+const learn_regex = new RegExp('[Ll]earn')
+bot.hears(learn_regex, (ctx)=> ctx.reply(learn_func(id_map[ctx.chat.id], json_db)))
 
 // done courses
+function course_func(ctx, db) {
 
-// helpful tips
-bot.hears('tips', (ctx)=> ctx.reply())
+	ctx.reply('Hello '+ id_map[String(ctx.chat.id)]+'!\n Your Curated Courses')
+	return out_str
+}
+const course_regex = new RegExp('[Cc]ourse')
+bot.hears(course_regex, (ctx)=> ctx.reply(course_func(id_map[ctx.chat.id], json_db)))
 
-// scorecard
-bot.hears('scorecard', (ctx)=> ctx.reply())
+
 
 // experts
-bot.hears('guru', (ctx)=> ctx.reply())
+function guru_func(ctx, db) {
 
+	return out_str
+}
+const guru_func = new RegExp('[Gg]uru')
+bot.hears(guru_func, (ctx)=> tx.reply(guru_func(id_map[ctx.chat.id], json_db)))
 
 
 bot.startPolling()
