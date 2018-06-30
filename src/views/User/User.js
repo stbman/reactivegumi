@@ -114,7 +114,19 @@ const cscCourses = [
     'courseName': 'Data Visualisation Begins with Me',
     'nextDate': '21 July 2018',
     'friendsAttended': 'Alan Lim, Tan Jia Hui',
-    'requiredFor': 'Data Visualisation Proficiency Level 3'
+    'requiredFor': 'Singapore Public Officer working with data or responsible for communication of data'
+  },
+  {
+    'courseName': 'Data Visualisation for Effective Communications',
+    'nextDate': '05 July 2018',
+    'friendsAttended': 'Matthew Yong K M, Teng Teng Ng',
+    'requiredFor': 'Singapore Public officer who is responsible for producing or communicating statistics to your stakeholders'
+  },
+  {
+    'courseName': 'CSC-Coursera Data Analytics Learning Bundle 1: Data Analytics - Basic Principles and Applications',
+    'nextDate': '01 October 2018',
+    'friendsAttended': 'Kang Shian Chin, Jacquelyn Chew',
+    'requiredFor': 'Those who manage a team which needs to use data to improve performance and/or provide insights into service innovation'
   }
 ]
 
@@ -123,7 +135,7 @@ const skillsFutureCourses = [
     'courseName': 'Data Visualisation Begins with Me',
     'nextDate': '21 July 2018',
     'friendsAttended': 'Alan Lim, Tan Jia Hui',
-    'requiredFor': 'Data Visualisation Proficiency Level 3'
+    'requiredFor': 'Singapore Public Officer working with data or responsible for communication of data'
   }
 ]
 
@@ -239,7 +251,7 @@ class User extends Component {
                             <tr key = {key}>
                               <td>
                                 <div><b><u>{item.courseName}</u></b></div>
-                                <div><span><b>Next Course Date:</b> {item.postDate}</span></div>
+                                <div><span><b>Next Course Date:</b> {item.nextDate}</span></div>
                                 <div><span><b>Friends Attended:</b> {item.friendsAttended}</span></div>
                                 <div><span><b>Required For:</b> {item.requiredFor}</span></div>
                               </td>
@@ -269,7 +281,7 @@ class User extends Component {
                             <tr key = {key}>
                               <td>
                                 <div><b><u>{item.courseName}</u></b></div>
-                                <div><span><b>Next Course Date:</b> {item.postDate}</span></div>
+                                <div><span><b>Next Course Date:</b> {item.nextDate}</span></div>
                                 <div><span><b>Friends Attended:</b> {item.friendsAttended}</span></div>
                                 <div><span><b>Required For:</b> {item.requiredFor}</span></div>
                               </td>
