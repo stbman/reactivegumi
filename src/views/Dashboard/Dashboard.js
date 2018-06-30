@@ -482,7 +482,7 @@ class Dashboard extends Component {
 
   processJsonData() {
     this.uniquePeople = this.state.data['unique_people'];
-    this.uniquePeople.sort(function(a,b) {return (a.count < b.count) ? 1 : ((b.count < a.count) ? -1 : 0);} ); 
+    this.state.data['unique_people'].sort(function(a,b) {return (a.count < b.count) ? 1 : ((b.count < a.count) ? -1 : 0);} ); 
 
     this.totalPosts = this.uniquePeople.reduce(function(prev, cur) {
       return prev + cur.count;
@@ -504,11 +504,16 @@ class Dashboard extends Component {
     this.totalSeenBy = this.likes.reduce(function(prev, cur) {
       return prev + cur.sum;
     }, 0);
-    this.seenBy.sort(function(a,b) {return (a.sum < b.sum) ? 1 : ((b.sum < a.sum) ? -1 : 0);} );     
+    this.seenBy.sort(function(a,b) {return (a.sum < b.sum) ? 1 : ((b.sum < a.sum) ? -1 : 0);} );  
+    
+    this.entitiesData = this.state.data['top_entities'];
+    
+    console.log(this.state.data['top_entities49*7'])
   }
 
   render() {
-    this.entitiesData = this.state.data['top_entities']
+    console.log(this.entitiesData)
+
 
     return (
       <div className="animated fadeIn">
@@ -582,36 +587,6 @@ class Dashboard extends Component {
             <Widget01 header={ this.entitiesData[3]["keyword"] } mainText={ this.entitiesData[3]["total_posts"].toString() } smallText={ this.entitiesData[3]["unique_string_2"].slice(0, -1) } className="bg-google-plus" variant="inverse">
             </Widget01>
           </Col>                    
-        </Row>
-
-        <Row>
-          <Col>
-            <Card>
-              <CardBody className="pb-4">
-                <h6>Content Analysis</h6>
-                  <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
-                  <tbody>
-                    <tr>
-                      <td><strong>Filename </strong></td>
-                      <td>{ this.state.data['data_details']['filename']}</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Data Generated On </strong></td>
-                      <td>{ this.state.data['data_details']['time_data_generated']}</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Earliest Post </strong></td>
-                      <td>{ this.state.data['data_details']['earliest_post']}</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Latest Post </strong></td>
-                      <td>{ this.state.data['data_details']['latest_post']}</td>
-                    </tr>
-                  </tbody>
-                  </Table>
-              </CardBody>
-            </Card>
-          </Col>
         </Row>
 
         <Row>

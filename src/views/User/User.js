@@ -328,7 +328,7 @@ class User extends Component {
                 </div>
               </CardHeader>
               <CardBody>
-                <Graph style={{ height: "500px"}} graph={NetworkGraph['graph']} options={NetworkGraph['options']} events={NetworkGraph['events']} />
+                <Graph style={{ height: "700px"}} graph={NetworkGraph['graph']} options={NetworkGraph['options']} events={NetworkGraph['events']} />
               </CardBody>
             </Card>
           </Col>

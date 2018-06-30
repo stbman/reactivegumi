@@ -41,7 +41,8 @@ class DefaultLayout extends Component {
   }
 
   async componentWillMount() {
-    const url = "data/groups_102523307031776_23-05-2018-15-02-44.json";
+    //const url = "data/groups_102523307031776_23-05-2018-15-02-44.json";
+    const url = "data/1_CSCHack.json";
     this.state.fileName = new String(url).replace(".json", "").replace("data/", "");
 
     const res = await axios.get(url);
