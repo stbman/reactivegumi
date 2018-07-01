@@ -19,7 +19,8 @@ const keyboard = Markup.inlineKeyboard([
 bot.start((ctx) => ctx.reply('Digital Twin Learning Bot!'))
 
 //media splash 
-bot.command('/info', (ctx) => { ctx.replyWithMediaGroup([
+bot.hears('info', (ctx) => { 
+ctx.replyWithMediaGroup([
 {
   'media': {source: '../assets/img/csc_logo.png'},
   'caption': 'Civil Service College Learning Bot 😃',
@@ -35,41 +36,52 @@ ctx.reply(
 
 //bot.help((ctx) => ctx.reply('Send me a sticker'))
 
-
 // daily digest
-function daily_func(id, db) {
-
-	return out_str
-}
 const daily_regex = new RegExp('[Dd]aily')
-bot.hears(daily_regex, (ctx)=> ctx.reply(daily_func(id_map[ctx.chat.id], json_db)))
-
-// quick review
-function learn_func(ctx, db) {
-
-	return out_str
-}
-const learn_regex = new RegExp('[Ll]earn')
-bot.hears(learn_regex, (ctx)=> ctx.reply(learn_func(id_map[ctx.chat.id], json_db)))
+bot.hears(daily_regex, (ctx)=> {
+	tele_id = ctx.chat.id
+	topics_arr = json_db[tele_id]['topics']
+	ctx.reply(id_map[tele_id]+'\'s Daily Feeds')
+	for (var i in topics_arr) {
+		var topic = topics_arr[i]
+		var link_str = JSON.stringify(topic['postLink'])
+		var content_str = JSON.stringify(topic['postContent'])
+		var out_str = '<a href='+ link_str+'>'+content_str+'</a>'
+		ctx.replyWithHTML(out_str) 
+	}
+})
 
 // done courses
-function course_func(ctx, db) {
-
-	ctx.reply('Hello '+ id_map[String(ctx.chat.id)]+'!\n Your Curated Courses')
-	return out_str
-}
-const course_regex = new RegExp('[Cc]ourse')
-bot.hears(course_regex, (ctx)=> ctx.reply(course_func(id_map[ctx.chat.id], json_db)))
-
+const learn_regex = new RegExp('[Ll]earn')
+bot.hears(learn_regex, (ctx)=> {
+	tele_id = ctx.chat.id
+	ctx.reply(id_map[tele_id]+'\'s CSC Courses')
+	learn_arr = json_db[tele_id]['cscCourses']
+	var out_str = ""
+	for (var i in learn_arr) {
+		var learn = learn_arr[i]
+		var name_str = JSON.stringify(expert['courseName']).replace(/\"/g, "")
+		out_str += name_str+'\n' 
+	}
+	ctx.reply(out_str) 
+})
 
 
 // experts
-function guru_func(ctx, db) {
-
-	return out_str
-}
-const guru_func = new RegExp('[Gg]uru')
-bot.hears(guru_func, (ctx)=> tx.reply(guru_func(id_map[ctx.chat.id], json_db)))
+const guru_regex = new RegExp('[Gg]uru[s]?')
+bot.hears(guru_regex, (ctx)=> {
+	tele_id = ctx.chat.id
+	ctx.reply(id_map[tele_id]+'\'s Gurus')
+	expert_arr = json_db[tele_id]['experts']
+	var out_str = ""
+	for (var i in expert_arr) {
+		var expert = expert_arr[i]
+		var name_str = JSON.stringify(expert['name']).replace(/\"/g, "")
+		var div_str = JSON.stringify(expert['division']).replace(/\"/g, "")
+		out_str += name_str+' @ '+div_str+'\n'
+	}
+	ctx.reply(out_str) 
+})
 
 
 bot.startPolling()
