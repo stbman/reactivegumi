@@ -58,10 +58,11 @@ bot.hears(learn_regex, (ctx)=> {
 	ctx.reply(id_map[tele_id]+'\'s CSC Courses')
 	learn_arr = json_db[tele_id]['cscCourses']
 	var out_str = ""
-	for (var i in learn_arr) {
+	var len = learn_arr.length
+	for (var i=0; i<len; i++) {
 		var learn = learn_arr[i]
-		var name_str = JSON.stringify(expert['courseName']).replace(/\"/g, "")
-		out_str += name_str+'\n' 
+		var name_str = JSON.stringify(learn['courseName']).replace(/\"/g, "")
+		out_str += String(i+1)+":  "+name_str+'\n' 
 	}
 	ctx.reply(out_str) 
 })
@@ -81,6 +82,13 @@ bot.hears(guru_regex, (ctx)=> {
 		out_str += name_str+' @ '+div_str+'\n'
 	}
 	ctx.reply(out_str) 
+})
+
+bot.hears('whoami', (ctx)=>
+{
+	var id = ctx.chat.id
+	console.log(id)
+	ctx.reply('your id is '+id)
 })
 
 
