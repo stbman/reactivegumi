@@ -98,19 +98,19 @@
   ],
   "skillsFutureCourses": [
     {
-      "courseName": "Data Visualization Fundamentals",
-      "nextDate": "22 October 2018",
-      "friendsAttended": "Leo Deng Yenn, Tan Beng Hock"
-    },
-    {
-      "courseName": "Collection, Management and Analysis of Quantitative Data",
-      "nextDate": "02 July 2018",
+      "courseName": "Coursera: Masters in Computer Science",
+      "nextDate": "20 July 2019",
       "friendsAttended": "Su Shiyan, Ong JunKai"
     },
     {
-      "courseName": "Building a Data Science Team",
-      "nextDate": "09 July 2018",
+      "courseName": "AI.SG: Improving Deep Neural Networks",
+      "nextDate": "09 August 2019",
       "friendsAttended": "Lek Juinn Feng, Alex Lee Yeaw Lip"
+    },
+    {
+      "courseName": "NVIDIA GPU Fundamentals",
+      "nextDate": "22 October 2019",
+      "friendsAttended": "Leo Deng Yenn, Tan Beng Hock"
     }
   ]
 }
