@@ -9970,5 +9970,8 @@ th.topics-cell {
 .fill-card {
   height: 97%; }
 
+#postsCard {
+  margin-bottom: 0px !important; }
+
 html body .app.flex-row.align-items-center {
   height: 100vh; }

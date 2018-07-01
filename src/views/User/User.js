@@ -13,7 +13,8 @@ import {
 } from 'reactstrap';
 import Widget02 from '../../views/Widgets/Widget02'
 
-import profile from '../../assets/img/profile/lynnette.png'
+import profile from '../../assets/img/profile/lynnette.jpeg'
+import feedback from '../../assets/img/feedback.jpg'
 import { NetworkGraph } from '../../assets/data/NetworkGraph.new'
 import axios from 'axios';
 
@@ -99,17 +100,17 @@ class User extends Component {
             </Col>
 
             <Col sm="4">
-              <Row>
-              <Col sm="6">
-                <Card>
-                  <CardBody>
-                    <div className="h1 text-muted text-right mb-2">
-                    <i className="icon-speech"></i>
-                    </div>
-                    <div className="h4 mb-0" style={{color:"#63c2de"}}>10</div>
-                    <small className="text-muted text-uppercase font-weight-bold">Posts</small>
-                  </CardBody>
-                </Card>
+              <Row id="postsCard">
+                <Col sm="6">
+                  <Card>
+                    <CardBody>
+                      <div className="h1 text-muted text-right mb-2">
+                      <i className="icon-speech"></i>
+                      </div>
+                      <div className="h4 mb-0" style={{color:"#63c2de"}}>10</div>
+                      <small className="text-muted text-uppercase font-weight-bold">Posts this month</small>
+                    </CardBody>
+                  </Card>
                 </Col>
 
                 <Col sm="6">
@@ -118,34 +119,21 @@ class User extends Component {
                     <div className="h1 text-muted text-right mb-2">
                     <i className="icon-calendar"></i>
                     </div>
-                    <div className="h4 mb-0" style={{color:"#20a8d8"}}>10</div>
-                    <small className="text-muted text-uppercase font-weight-bold">Posts This Month</small>
+                    <div className="h4 mb-0" style={{color:"#20a8d8"}}>67</div>
+                    <small className="text-muted text-uppercase font-weight-bold">Connections</small>
                   </CardBody>
                 </Card>
                 </Col>
               </Row>
 
               <Row>
-              <Col sm="6">
+              <Col sm="12">
                 <Card>
+                  <CardHeader>
+                    Reading Patterns
+                  </CardHeader>
                   <CardBody>
-                    <div className="h1 text-muted text-right mb-2">
-                    <i className="icon-user-follow"></i>
-                    </div>
-                    <div className="h4 mb-0" style={{color:"#ffc107"}}>60</div>
-                    <small className="text-muted text-uppercase font-weight-bold">Friends Liked My Posts</small>
-                  </CardBody>
-                </Card>
-                </Col>
-
-                <Col sm="6">
-                <Card>
-                  <CardBody>
-                    <div className="h1 text-muted text-right mb-2">
-                    <i className="icon-people"></i>
-                    </div>
-                    <div className="h4 mb-0" style={{color:"#f86c6b"}}>182</div>
-                    <small className="text-muted text-uppercase font-weight-bold">Friends Seen My Posts</small>
+                    <img className="d-block w-100" src={ feedback } />
                   </CardBody>
                 </Card>
                 </Col>
@@ -185,7 +173,7 @@ class User extends Component {
             <Col sm="4">
                 <Card className="fill-card">
                   <CardHeader>
-                    Recommended Skills Future Courses
+                    Recommended Skills for the Future
                   </CardHeader>
                   <CardBody className="pb-4">
                     <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
@@ -197,7 +185,7 @@ class User extends Component {
                                 <td>
                                   <div><b><u>{item.courseName}</u></b></div>
                                   <div><span><b>Next Course Date:</b> {item.nextDate}</span></div>
-                                  <div><span><b>Friends Attended:</b> {item.friendsAttended}</span></div>
+                                  <div><span><b>Friends Attending:</b> {item.friendsAttended}</span></div>
                                 </td>
                             </tr>
                             )
